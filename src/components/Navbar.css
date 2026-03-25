@@ -1,0 +1,13 @@
+.container-navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; /* Para que se vea la manita */
+    gap: 20px;
+}
