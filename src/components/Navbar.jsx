@@ -22,6 +22,7 @@ const Navbar = ({children}) => {
                     <p>
                         <Link to="/contact-me">Contact Me</Link>
                     
+                    
                     </p> 
                 </div>
             </div>
