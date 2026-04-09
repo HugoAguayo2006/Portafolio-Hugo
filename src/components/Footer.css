@@ -1,0 +1,130 @@
+
+.container-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0F172A;
+  height: 100px;
+  padding: 0 40px;
+  position: relative;
+  width: 100%;
+  border-top: 8px solid #10B981; 
+}
+
+/* IZQUIERDA */
+
+.footer-left{
+    flex: 2;
+    justify-content: flex-start;
+    font-weight: 800;
+    font-size: 18px;
+    color: #ffffff97;
+}
+
+.footer-left a {
+  margin-left: 5px;
+}
+
+.link-nivos{
+    color:  #319def;
+    text-decoration: none;
+        cursor: pointer;
+
+}
+
+/* DERECHA */
+.footer-right{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contenedor-botones{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.whatsapp{
+    width: 140px;
+    height: 45px;
+    border-radius: 10px; 
+    background-color: #25D366;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+
+    font-weight: 800;
+    font-size: 18px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+
+}
+.linkedln{
+    width: 140px;
+    height: 45px;
+    border-radius: 10px; 
+    background-color: #007FBA;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+
+    font-weight: 800;
+    font-size: 18px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+
+}
+
+.github{
+    width: 140px;
+    height: 45px;
+    border-radius: 10px; 
+    background-color: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+
+    font-weight: 800;
+    font-size: 18px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+
+}
+
+.github:hover,
+.linkedln:hover,
+.whatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.github-icon,
+.linkedln-icon{
+    width: 25px;
+    height: 25px;
+    margin-right: 7px;
+    margin-bottom: 3px;
+}
+
+.whatsapp-icon{
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+
