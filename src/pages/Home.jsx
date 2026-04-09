@@ -1,5 +1,7 @@
 import { Link } from "react-router";
 import Hero from "../components/Hero";
+import TechCarousel from "../components/Carrusel";
+
 import "./Home.css";
 const Home = () => {
     return(
@@ -12,8 +14,8 @@ const Home = () => {
             
         </div>
 
+            <TechCarousel /> 
 
-            <Hero/>
 
         </>
     );
