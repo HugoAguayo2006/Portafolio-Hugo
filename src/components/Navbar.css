@@ -10,4 +10,9 @@
     align-items: center;
     cursor: pointer; /* Para que se vea la manita */
     gap: 20px;
+    color: #fff;
+}
+
+.links:active{
+    color: aqua;
 }

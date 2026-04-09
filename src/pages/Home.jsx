@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-
+import Hero from "../components/Hero";
 const Home = () => {
     return(
         <>
@@ -7,6 +7,8 @@ const Home = () => {
             <p>
                 <Link to="/"> Go back</Link>
             </p>
+            
+            <Hero/>
 
         </>
     );

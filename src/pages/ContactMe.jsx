@@ -4,7 +4,6 @@ const Contactme = () => {
   const [form, setForm] = useState({
     name: '',
     email: '',
-    subject: '',
     message: '',
   });
 
@@ -14,61 +13,61 @@ const Contactme = () => {
       ...prev,
       [name]: value,
     }));
-    console.log(form);
   };
 
   const handleSendEmail = async (e) => {
     e.preventDefault();
-    const data = await fetch('/api/server', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        name: form.name,
-        email: form.email,
-        message: form.message,
-      }),
-    });
 
-    const res = await data.json();
-    console.log(res);
+    try {
+      const data = await fetch('/api/server', {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      const res = await data.json();
+      console.log(res);
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
 
   return (
-    <div>
-      Contactme
-      <div>
-        <div style={{ display: 'flex', gap: '20px' }}>
-          <input
-            name="name"
-            type="text"
-            value={form.name}
-            onChange={handleOnchange}
-          />
-          <input
-            name="email"
-            type="email"
-            value={form.email}
-            onChange={handleOnchange}
-          />
-        </div>
-        <div style={{ paddingTop: '20px' }}>
-          <textarea
-            name="message"
-            type="message"
-            rows="10"
-            cols="50"
-            value={form.message}
-            onChange={handleOnchange}
-          />
-        </div>
-        <button 
-          style={{ width: '140px', height: '40px' }} 
-          onClick={handleSendEmail}
-        >
-          Contact Me
-        </button>
+    <form onSubmit={handleSendEmail}>
+      <div style={{ display: 'flex', gap: '20px' }}>
+        <input
+          name="name"
+          type="text"
+          value={form.name}
+          onChange={handleOnchange}
+          placeholder="Name"
+        />
+        <input
+          name="email"
+          type="email"
+          value={form.email}
+          onChange={handleOnchange}
+          placeholder="Email"
+        />
       </div>
-    </div>
+
+      <div style={{ paddingTop: '20px' }}>
+        <textarea
+          name="message"
+          rows="10"
+          cols="50"
+          value={form.message}
+          onChange={handleOnchange}
+          placeholder="Message"
+        />
+      </div>
+
+      <button type="submit" style={{ width: '140px', height: '40px' }}>
+        Contact Me
+      </button>
+    </form>
   );
 };
 

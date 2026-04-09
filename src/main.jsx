@@ -2,7 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App.jsx';
-import { BrowserRouter, Route, Routes } from 'react-router';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home.jsx';
 import AboutMe from './pages/AboutMe.jsx';
 import Pro from './pages/Projects.jsx';
@@ -12,11 +12,19 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/about-me" element={<AboutMe />} />
-        <Route path="/projects" element={<Pro />} />
-        <Route path="/contact-me" element={<Conta />} />
+
+        {/* 👇 Layout principal */}
+        <Route path="/" element={<App />}>
+
+          {/* 👇 Estas páginas usan el Outlet */}
+          <Route index element={<Home />} />
+          <Route path="home" element={<Home />} />
+          <Route path="about-me" element={<AboutMe />} />
+          <Route path="projects" element={<Pro />} />
+          <Route path="contact-me" element={<Conta />} />
+
+        </Route>
+
       </Routes>
     </BrowserRouter>
   </StrictMode>,
