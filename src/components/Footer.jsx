@@ -19,7 +19,7 @@ function Footer() {
       <div className='footer-right'></div>
         <div className="contenedor-botones">
             <a
-            href="https://wa.me/523310392675?text=Hello%20Hugo%2C%20I%20saw%20your%20portfolio%20and%20I%E2%80%99m%20interested%20in%20speaking%20with%20you."
+            href="https://www.linkedin.com/in/josehugoaguayomendoza/"
             target="_blank"
             rel="noopener noreferrer"
             className="linkedln"
@@ -32,7 +32,7 @@ function Footer() {
             LinkedIn
             </a>
             <a
-            href="https://wa.me/523310392675?text=Hello%20Hugo%2C%20I%20saw%20your%20portfolio%20and%20I%E2%80%99m%20interested%20in%20speaking%20with%20you."
+            href="https://github.com/HugoAguayo2006"
             target="_blank"
             rel="noopener noreferrer"
             className="github"
