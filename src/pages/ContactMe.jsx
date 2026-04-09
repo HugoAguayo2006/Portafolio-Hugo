@@ -21,7 +21,7 @@ export default function ContactMe() {
 
     const handleSendEmail = async (e) => {
         e.preventDefault();
-        const data = await fetch('api/server.js', {
+        const data = await fetch('api/server', {
             method: "POST",
             headers: {},
             body: JSON.stringify({
