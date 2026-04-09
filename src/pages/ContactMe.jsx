@@ -92,6 +92,8 @@ export default function ContactMe() {
 
                         </div>
 
+                        {/* COLUMNA DERECHA */}
+
                         <div className="contact-right">
                             <h2 className="connect-title">Connect with me</h2>
 
@@ -173,14 +175,3 @@ export default function ContactMe() {
 
 
 
-{/* <h1>Contact Me</h1>
-                            <div>
-                                <div style={{ display: 'flex', gap: '20px' }}>
-                                    <input name="name" type="text" value={form.name} onChange={handleOnChange} />
-                                    <input name="email" type="email" value={form.email} onChange={handleOnChange} />
-                                </div>
-                                <div style={{ paddingTop: '20px' }}>
-                                    <textarea name="message" rows="10" cols="50" value={form.message} onChange={handleOnChange}>Write something here</textarea>
-                                </div>
-                                <button onClick={handleSendEmail} style={{ width: '140px', height: '40px' }}>Contact Me</button>
-                            </div> */}
