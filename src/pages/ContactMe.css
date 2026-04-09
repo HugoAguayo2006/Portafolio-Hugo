@@ -1,0 +1,234 @@
+   .contactMe-page{
+    background-color: #002115;
+   }
+   
+   .contactMe-container{
+        margin-left: 80px;
+    }
+    
+    .contactMe-title-text{
+        margin-bottom: 10px;
+        font-size: 90px;
+        font-weight: bold;
+        color: #ffffff97;
+        padding-top: 60px;
+    }
+    
+    .secondary-text {
+        background: linear-gradient(0.25turn, #10B981, #ebf8e1, #cf5cff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .letras-pequenas-abajo{
+        color: #10B981;
+        margin-left: 5px;
+        font-size: 20px;
+        margin-bottom: 60px;
+    }
+
+    .contactMe-bottom {
+        display: grid;
+        grid-template-columns: 1.4fr 0.9fr;
+        gap: 40px;
+        align-items: start;
+    }
+
+    /* izquierda */
+    .contactMe-form {
+        position: relative;
+        background: #0F172A;
+        padding: 42px;
+        margin-bottom: 100px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .contactMe-form::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+
+        background: linear-gradient(180deg, #10B981, #ebf8e1, #cf5cff);
+
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    .input-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input-group label {
+        font-size: 15px;
+        letter-spacing: 3px;
+        color: #ffffff97;
+        margin-bottom: 12px;
+        margin-left: 5px;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        background: #050505;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 18px 16px;
+        font-size: 20px;
+        border-radius: 20px;
+        font-family: Arial, sans-serif;
+    }
+
+    .input-group textarea {
+        resize: none;
+        min-height: 180px;
+    }
+
+    .input-group-full {
+        margin-bottom: 34px;
+    }
+
+    .send-btn {
+        width: 320px;
+        height: 64px;
+        border-radius: 20px;
+        color: white;
+        font-size: 22px;
+        font-weight: 800;
+        cursor: pointer; 
+        border: 2px solid transparent;
+        border-radius: 12px;
+        background: 
+        linear-gradient(#0F172A, #0F172A) padding-box,
+        linear-gradient(0.25turn, #10B981, #ebf8e1, #cf5cff) border-box;
+        transition: transform 0.25s ease;
+    }
+
+     .send-btn:hover {
+        transform: scale(1.05);
+     }
+
+
+
+    /* Drecha */
+    .contact-right {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        margin-top: 30px;
+    }
+
+    .connect-title {
+        color: #ffffff97;
+        font-size: 32px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .contact-cards-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Las 4 cards */
+        gap: 22px;
+    }
+
+    .contact-card {
+        background: #0F172A;
+        min-height: 110px;
+        padding: 22px 24px;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        text-decoration: none;
+        color: white;
+        transition: transform 0.22s ease, background 0.22s ease;
+    }
+
+    .contact-card:hover {
+        transform: translateY(-4px);
+        background: #202027;
+    }
+
+    .contact-card-icon {
+        width: 58px;
+        height: 58px;
+        background: #050505;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 26px;
+        font-weight: 700;
+        flex-shrink: 0;
+    }
+
+    .github-icon-contactme{
+        width: 25px;
+        height: 25px;
+        margin-right: -3px;
+        margin-bottom: 3px;
+    }
+
+    .whatsapp-icon-contactme,
+    .linkedin-icon-contactme{
+        width: 25px;
+        height: 25px;
+    }
+
+    .gmail-icon-contactme{
+        width: 30px;
+        height: 20px; 
+    }
+
+    .contact-card-text {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .contact-card-label {
+        color: #ffffff97;
+        font-size: 12px;
+        letter-spacing: 2px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .contact-card-text h3 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 700;
+        color: #f5f5f5;
+    }
+
+    .location-card {
+        background: #0F172A;
+        padding: 24px;
+        position: relative;
+        min-height: 30px;
+    }
+
+    .location-title {
+        margin: 0 0 10px 0;
+        color: #f3f4f6;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .location-coords {
+        margin: 0 0 22px 0;
+        color: #10B981;
+        font-size: 14px;
+        letter-spacing: 2px;
+        font-weight: 700;
+        margin-bottom: 0px;
+    }

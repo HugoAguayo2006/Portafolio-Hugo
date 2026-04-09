@@ -2,7 +2,7 @@
 
 .home-intro{
     background: #002115;
-    min-height: 70vh; /* importante para que cubra toda la pantalla */
+    min-height: 70vh; 
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -91,6 +91,7 @@
     background: 
     linear-gradient(#0F172A, #0F172A) padding-box,
     linear-gradient(0.25turn, #10B981, #ebf8e1, #cf5cff) border-box;
+      transition: transform 0.25s ease;
   }
 
   .btn-morado:hover,
@@ -119,9 +120,9 @@
 
   .home-projects{
       background: #002115;
-      min-height: 80vh; /* importante para que cubra toda la pantalla */
+      min-height: 80vh; 
       display: flex;
-      align-items: center;   /* 🔥 centra vertical */
+      align-items: center;  
   }
 
   .texto-recent-projects{
@@ -139,7 +140,6 @@
     font-size: 80px;
     font-weight: 800;
     margin-top: 50px;
-
 
   }
 

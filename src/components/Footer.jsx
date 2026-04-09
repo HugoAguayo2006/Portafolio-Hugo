@@ -26,7 +26,7 @@ function Footer() {
             >
             <img 
             src="/icons/linkedin.webp" 
-            alt="WhatsApp" 
+            alt="linkdln" 
             className="linkedln-icon"
             />
             LinkedIn
@@ -39,7 +39,7 @@ function Footer() {
             >
             <img 
             src="/icons/github.webp" 
-            alt="WhatsApp" 
+            alt="github" 
             className="github-icon"
             />
             GitHub

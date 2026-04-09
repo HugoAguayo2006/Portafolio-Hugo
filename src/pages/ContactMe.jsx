@@ -39,17 +39,15 @@ export default function ContactMe() {
         <div className="contactMe-page">
 
                 <section className="contactMe-container">
-
                     <div className="contactMe-top">
-                        <h1 className="contactMe-main-text">Initiate Project</h1>
-                        <p className="description">
-                            Ready to transform complex requirments into
-                            elegant digital architecture? Let's build
-                            something that moves the needle.
+                        <h1 className="contactMe-title-text">Let’s Build Something <span className='secondary-text'>Together</span></h1>
+                        <p className="letras-pequenas-abajo">
+                            // STATUS: OPEN TO COLLABORATION & NEW OPPORTUNITIES
                         </p>
                     </div>
 
-                    <div className="contactMe-middle">
+                    <div className="contactMe-bottom">
+                        {/* COLUMNA IZQUIERDA */}
                         <div className="contactMe-form">
 
                             <form onSubmit={handleSendEmail}>
@@ -59,7 +57,7 @@ export default function ContactMe() {
                                         <input
                                             name="name"
                                             type="text"
-                                            placeholder="Full Name"
+                                            placeholder="Your Name"
                                             value={form.name}
                                             onChange={handleOnChange}
                                         />
@@ -70,7 +68,7 @@ export default function ContactMe() {
                                         <input
                                             name="email"
                                             type="email"
-                                            placeholder="email@example.com"
+                                            placeholder="youremail@example.com"
                                             value={form.email}
                                             onChange={handleOnChange}
                                         />
@@ -81,36 +79,85 @@ export default function ContactMe() {
                                     <label>PROJECT BRIEF</label>
                                     <textarea
                                         name="message"
-                                        placeholder="Tell me about your vision, technical requirements, and goals..."
+                                        placeholder="Tell me about your project...  "
                                         value={form.message}
                                         onChange={handleOnChange}
                                     />
                                 </div>
 
                                 <button type="submit" className="send-btn">
-                                    Send Message
+                                    Send me your Message
                                 </button>
                             </form>
 
                         </div>
 
-                        <div className="contact-info">
-                            <div className="info-block">
-                                <p className="info-label">DIRECT COMMUNICATION</p>
-                                <h3 className="info-main">guillermo.delatorreisunza@gmail.com</h3>
-                            </div>
-                            <div className="info-block">
-                                <p className="info-label">CURRENT STATUS</p>
-                                <h3 className="info-main">Available</h3>
-                                <p className="info-sub">Available Worldwide</p>
-                            </div>
-                            <div className="info-block">
-                                <p className="info-label">DIGITAL PRESENCE</p>
-                                <div className="social-links">
-                                    <a href="https://github.com/Guillermo-dlti" target="_blank" rel="noopener noreferrer">Github <span className="arrow">↗</span></a>
-                                    <a href="https://www.linkedin.com/in/guillermo-de-la-torre-isunza/" target="_blank" rel="noopener noreferrer">LinkedIn <span className="arrow">↗</span></a>
-                                    <a href="mailto:guillermo.delatorreisunza@gmail.com">Email <span className="arrow">↗</span></a>
+                        <div className="contact-right">
+                            <h2 className="connect-title">Connect with me</h2>
+
+                            <div className="contact-cards-grid">
+                                <a href="https://github.com/HugoAguayo2006" className="contact-card" target="_blank" rel="noreferrer">
+                                <div className="contact-card-icon">
+                                    <img 
+                                    src="/icons/github.webp" 
+                                    alt="github" 
+                                    className="github-icon-contactme"
+                                    />
                                 </div>
+                                <div className="contact-card-text">
+                                    <span className="contact-card-label">SOURCE CONTROL</span>
+                                    <h3>GitHub</h3>
+                                </div>
+                                </a>
+
+                                <a href="https://www.linkedin.com/in/josehugoaguayomendoza/" className="contact-card" target="_blank" rel="noreferrer">
+                                <div className="contact-card-icon">
+                                    <img 
+                                    src="/icons/linkedin.webp" 
+                                    alt="linkedln" 
+                                    className="linkedin-icon-contactme"
+                                    />
+                                </div>
+                                <div className="contact-card-text">
+                                    <span className="contact-card-label">PROFESSIONAL</span>
+                                    <h3>LinkedIn</h3>
+                                </div>
+                                </a>
+
+                                <a href="https://wa.me/523310392675?text=Hello%20Hugo%2C%20I%20saw%20your%20portfolio%20and%20I%E2%80%99m%20interested%20in%20speaking%20with%20you" className="contact-card" target="_blank" rel="noreferrer">
+                                <div className="contact-card-icon">
+                                    <img 
+                                    src="/icons/WhatsApp.webp" 
+                                    alt="whatsapp" 
+                                    className="whatsapp-icon-contactme"
+                                    />
+                                </div>
+                                <div className="contact-card-text">
+                                    <span className="contact-card-label">Instant messaging</span>
+                                    <h3>WhatsApp</h3>
+                                </div>
+                                </a>
+
+                                <a href="mailto:hugoaguayo50@gmail.com" className="contact-card">
+                                <div className="contact-card-icon">
+                                    <img 
+                                    src="/icons/Gmail.webp" 
+                                    alt="Gmail" 
+                                    className="gmail-icon-contactme"
+                                    />
+                                </div>
+                                <div className="contact-card-text">
+                                    <span className="contact-card-label">DIRECT LINE</span>
+                                    <h3>Email</h3>
+                                </div>
+                                </a>
+                            </div>
+
+                            <div className="location-card">
+                                <h3 className="location-title">Current Location</h3>
+                                <p className="location-coords">GUADALAJARA, JAL, MX</p>
+
+
                             </div>
                         </div>
 
