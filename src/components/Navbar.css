@@ -1,18 +1,89 @@
 .container-navbar{
     display: flex;
-    justify-content: center;
+    justify-content: space-between; 
     align-items: center;
+    background-color: #0F172A;
+    height: 70px;
+    padding: 0 40px;
+    position: relative; 
+
 }
 
-.links{
+/* IZQUIERDA */
+.nav-left {
+  flex: 1;
+}
+
+.logo {
+    color: #10B981;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+    font-weight: 800;
+    font-size: 20px;
+    display: inline-block; 
+}
+
+/* CENTRO */
+.nav-center{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    justify-content: center;
     align-items: center;
-    cursor: pointer; /* Para que se vea la manita */
-    gap: 20px;
-    color: #fff;
+    gap: 50px;
+
 }
 
-.links:active{
-    color: aqua;
+/* LINKS */
+.link {
+    color: #ffffff97;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+    font-weight: 800;
+    font-size: 20px;
+    display: inline-block; 
+}
+
+.link:hover {
+    color: #10b981;
+    transform: translateY(-2px);
+}
+
+.link.active {
+    color: #10B981;
+    text-decoration: underline;
+}
+
+/* DERECHA */
+.nav-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-CV {
+    width: 120px;
+    height: 45px;
+    border-radius: 10px; 
+    background-color: #10B981;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+
+    font-weight: 700;
+    font-size: 20px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+
+.btn-CV:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    background-color: #059669; 
 }
