@@ -129,7 +129,7 @@
         margin-top: 30px;
         width: calc(100% - 60px);
         max-width: 532px;
-        margin-left: 48px;
+        margin-left: 42px;
         box-sizing: border-box;
     }
 
@@ -235,4 +235,23 @@
         letter-spacing: 2px;
         font-weight: 700;
         margin-bottom: 0px;
+    }
+
+
+    .form-status {
+        margin-top: 12px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .form-status.loading {
+        color: #c9a227; /* dorado */
+    }
+
+    .form-status.success {
+        color: #10b981; /* verde */
+    }
+
+    .form-status.error {
+        color: #ef4444; /* rojo */
     }

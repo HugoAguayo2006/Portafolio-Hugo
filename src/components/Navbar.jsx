@@ -24,6 +24,9 @@ const Navbar = ({children}) => {
                         <NavLink to="/about-me" className="link" >ABOUT ME</NavLink>
                     </p>
                     <p>
+                        <NavLink to="/experience" className="link" >EXPERIENCE</NavLink>
+                    </p>
+                    <p>
                         <NavLink to="/projects" className="link">PROJECTS</NavLink>
                     </p>
                     <p>
