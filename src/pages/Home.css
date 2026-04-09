@@ -1,0 +1,10 @@
+
+
+.home{
+    background-color: azure;
+      min-height: 100vh; /* importante para que cubra toda la pantalla */
+}
+
+h1 {
+  margin: 0;
+}

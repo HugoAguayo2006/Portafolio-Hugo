@@ -1,13 +1,15 @@
-.container-navbar{
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    background-color: #0F172A;
-    height: 70px;
-    padding: 0 40px;
-    position: relative; 
-
+.container-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0F172A;
+  height: 100px;
+  padding: 0 40px;
+  position: relative;
+  width: 100%;
+  border-bottom: 8px solid #10B981; /* gris oscuro elegante */
 }
+
 
 /* IZQUIERDA */
 .nav-left {
@@ -19,7 +21,7 @@
     text-decoration: none;
     transition: transform 0.3s ease, color 0.3s ease;
     font-weight: 800;
-    font-size: 20px;
+    font-size: 22px;
     display: inline-block; 
 }
 
@@ -40,7 +42,7 @@
     text-decoration: none;
     transition: transform 0.3s ease, color 0.3s ease;
     font-weight: 800;
-    font-size: 20px;
+    font-size: 22px;
     display: inline-block; 
 }
 
@@ -76,7 +78,7 @@
     align-items: center;    
 
     font-weight: 700;
-    font-size: 20px;
+    font-size: 22px;
 
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }

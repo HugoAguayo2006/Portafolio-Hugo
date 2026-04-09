@@ -1,5 +1,21 @@
-body{
-    background-color: #1D0C26;
-    color: white;
-    font-family: arial;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  background-color: #0F172A;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
 }
