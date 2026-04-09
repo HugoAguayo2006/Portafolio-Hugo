@@ -2,7 +2,6 @@ import "./ContactMe.css";
 import { Link } from "react-router";
 import React, { useState } from "react";
 
-
 export default function ContactMe() {
     const [form, setForm] = useState({
         name: '',
@@ -21,17 +20,42 @@ export default function ContactMe() {
 
     const handleSendEmail = async (e) => {
         e.preventDefault();
-        const data = await fetch('api/server', {
-            method: "POST",
-            headers: {},
-            body: JSON.stringify({
-                name: form.name,
-                email: form.email,
-                message: form.message,
-            }),
-        });
-        const res = await data.json();
-        console.log(res);
+
+        try {
+            const data = await fetch('/api/server', {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json", // 🔥 CLAVE
+                },
+                body: JSON.stringify({
+                    name: form.name,
+                    email: form.email,
+                    subject: form.subject,
+                    message: form.message,
+                }),
+            });
+
+            const res = await data.json();
+            console.log(res);
+
+            if (!data.ok) {
+                throw new Error(res.message || "Error al enviar");
+            }
+
+            alert("Mensaje enviado correctamente ✅");
+
+            // limpiar formulario
+            setForm({
+                name: '',
+                email: '',
+                subject: '',
+                message: ''
+            });
+
+        } catch (error) {
+            console.error(error);
+            alert("Hubo un error al enviar ❌");
+        }
     };
 
 
@@ -158,8 +182,6 @@ export default function ContactMe() {
                             <div className="location-card">
                                 <h3 className="location-title">Current Location</h3>
                                 <p className="location-coords">GUADALAJARA, JAL, MX</p>
-
-
                             </div>
                         </div>
 
@@ -169,9 +191,3 @@ export default function ContactMe() {
         </div>
     );
 }
-
-
-
-
-
-
