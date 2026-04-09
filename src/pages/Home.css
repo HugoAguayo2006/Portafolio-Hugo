@@ -1,10 +1,123 @@
 
 
-.home{
-    background-color: azure;
-      min-height: 100vh; /* importante para que cubra toda la pantalla */
-}
+.home-intro{
+    background: #002115;
+    min-height: 70vh; /* importante para que cubra toda la pantalla */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:40px;
+  }
 
-h1 {
-  margin: 0;
-}
+  .text-column {
+    flex: 2;
+    margin-left: 60px;
+  }
+  
+  .letras-pequenas{
+    color: #10B981;
+    margin-left: 5px;
+    font-size: 20px;
+   
+  }
+
+  .letras-medianas{
+    font-size: 35px;
+    color: #ffffff97;
+    width: 100%;
+
+  }
+
+  .main-text {
+     margin-bottom: 10px;
+     margin-top: 10px;
+    font-size: 90px;
+    font-weight: bold;
+    color: #ffffff97;
+  }
+
+  .secondary-text {
+    background: linear-gradient(0.25turn, #10B981, #ebf8e1, #cf5cff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .btn-container{
+    display: flex;
+    gap: 30px;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 22px;
+
+  }
+  .btn{
+    width: 191px;
+    height: 56px;  
+    border: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 10px; 
+    background-color: #10B981;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .btn-morado{
+    width: 191px;
+    height: 56px;  
+    border: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 10px; 
+    background-color: #cf5cff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+    text-decoration: none;
+    
+  }
+
+  .btn,
+  .btn-morado{
+    color: #ffffff97;
+    border: 5px solid transparent;
+    border-radius: 12px;
+    background: 
+    linear-gradient(#0F172A, #0F172A) padding-box,
+    linear-gradient(0.25turn, #10B981, #ebf8e1, #cf5cff) border-box;
+  }
+
+  .btn-morado:hover,
+  .btn:hover {
+    transform: scale(1.05);
+  }
+
+  .image-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-right: 60px;
+  }
+
+  .image-column img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 12px;
+    border: 5px solid transparent;
+    border-radius: 12px;
+    background: 
+    linear-gradient(#0F172A, #0F172A) padding-box,
+    linear-gradient(0.25turn, #10B981, #ebf8e1, #cf5cff) border-box;
+  }
+
+  .home-projects{
+      background: #002115;
+      min-height: 70vh; /* importante para que cubra toda la pantalla */
+  }

@@ -52,7 +52,7 @@ export default function TechCarousel() {
     const visible = [];
     const total = techs.length;
 
-    for (let offset = -3; offset <= 3; offset++) {
+    for (let offset = -4; offset <= 4; offset++) {
       const index = (activeIndex + offset + total) % total;
       visible.push({
         ...techs[index],
