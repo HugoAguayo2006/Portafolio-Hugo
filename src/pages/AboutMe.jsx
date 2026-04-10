@@ -87,15 +87,45 @@ const AboutMe = () =>{
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 >
-                                See diplomas
+                                See diploma
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div className="certificate-card">...</div>
-                    <div className="certificate-card">...</div>
-                    <div className="certificate-card">...</div>
-                    <div className="certificate-card">...</div>
+                    <div className="certificate-card">
+                        <img src="/images/aboutme/diplomas/hackmty.webp" alt="HackMTY 2025 participation certificate" />
+                        <div className="texto">
+                            <p className="certificado-titulo">HackMTY 2025 participation certificate </p>
+                            <p className="certificado-institucion">Instituto Tecnológico y de Estudios Superiores de Monterrey</p>
+                            <p className="certificado-ano">2025</p>
+                            <div className="btn-certificados">
+                                <a
+                                href="/pdf/CertificadoHackMTY2025HugoAguayo.pdf" 
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >
+                                See certificate
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="certificate-card">
+                        <img src="/images/aboutme/diplomas/mentoria.webp" alt="Peer Mentoring Program" />
+                        <div className="texto">
+                            <p className="certificado-titulo">Peer Mentoring Program</p>
+                            <p className="certificado-institucion">Instituto Tecnológico y de Estudios Superiores de Monterrey</p>
+                            <p className="certificado-ano">2025</p>
+                            <div className="btn-certificados">
+                                <a
+                                href="/pdf/mentoria.pdf" 
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >
+                                See certificate
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
   
         </div>
