@@ -32,7 +32,7 @@ const Home = () => {
             </div>
 
             <div className="image-column">
-                <img src="/images/home/jose-hugo-aguayo-mendoza.webp" alt="Foto de Jose Hugo Aguayo Mendoza" />
+                <img src="/images/home/jose-hugo-aguayo-mendoza-2.webp" alt="Foto de Jose Hugo Aguayo Mendoza" />
             </div>
             
         </section>

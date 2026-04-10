@@ -37,7 +37,7 @@ const Navbar = ({children}) => {
 
                   <div className="nav-right">
                     <a 
-                    href="/CV_Jose_Hugo_Aguayo_Mendoza.pdf" 
+                    href="/pdf/CV_Jose_Hugo_Aguayo_Mendoza.pdf" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="btn-CV"

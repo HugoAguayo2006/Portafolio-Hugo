@@ -3,7 +3,7 @@
    }
 
     .aboutme-container{
-        margin-left: 80px;
+
     }
     
 
@@ -17,7 +17,7 @@
         color: #10B981;
         margin-left: 5px;
         font-size: 20px;
-        padding-top: 30px;
+        padding-top: 40px;
         margin-bottom: 2px;
     }
 
@@ -26,4 +26,190 @@
         font-size: 90px;
         font-weight: bold;
         color: #ffffff97;
+        
     }
+
+    .aboutme-bottom {
+        display: flex;
+        gap: 20px; /* espacio entre columnas */
+        padding-top: 20px;
+        padding-bottom: 100px;
+    }
+
+    .aboutme-izquieda{
+        flex: 1; /* más chica */
+        margin-left: 55px;
+        overflow: hidden; /* 👈 IMPORTANTE para que no se salga */
+    }
+
+    .aboutme-izquieda img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px; 
+        object-fit: cover;
+        border: 5px solid transparent;
+
+        background: 
+        linear-gradient(#0F172A, #0F172A) padding-box,
+        linear-gradient(0.25turn, #10B981, #ebf8e1, #cf5cff) border-box;
+   
+    }
+
+    .aboutme-derecha{
+        flex: 2; /* más grande */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .aboutme-derecha p{
+        font-size: 28px;
+        color: #ffffff97;
+        width: 95%;
+        
+    }
+
+    .aboutme-fondo-cita {
+        width: 100%;
+        height: 400px;
+        background: url('/yoda.webp');
+        background-size: cover;       /* que cubra todo */
+        background-position: center 25%;
+        background-repeat: no-repeat; /* sin repetirse */
+        text-align: center;
+        position: relative;
+    }
+
+    .quote-icon {
+        font-size: 300px;
+        color: #00ff88; 
+        display: block;
+        margin-bottom: -200px;
+    }
+
+    .quote-text {
+    font-size: 60px;
+    font-weight: 800;
+    color: #cbd5e1;
+    line-height: 1.2;
+    }
+
+    .quote-text::before {
+    content: "“";
+    margin-right: 10px;
+    }
+
+    .quote-text::after {
+    content: "”";
+    margin-left: 10px;
+    }
+
+    .quote-author {
+    display: block;
+    margin-top: 20px;
+    color: #00ff88;
+    letter-spacing: 4px;
+    font-size: 24px;
+    font-weight:600;
+    }
+
+    .certificates-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 COLUMNAS */
+        gap: 24px;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 40px;
+    }
+
+    .tercero-text {
+        background: linear-gradient(0.25turn, #F97316, #FACC15, #EF4444);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .certificados-top{
+        display: flex;
+        flex-direction: column; 
+        align-items: center;  
+        margin-top: 50px;
+    }
+
+    .certificate-card {
+        background: #0F172A;
+        border-radius: 20px;
+        padding: 20px;
+        border: 1px solid rgba(255,255,255,0.08);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+            transition: all 0.3s ease;
+    }
+
+    .certificate-card:hover {
+        transform: translateY(-5px); /* levanta la card */
+        box-shadow: 
+            0 0 10px #10B981,
+            0 0 20px #10B981,
+            0 0 40px #10B981;
+    }
+
+    .certificate-card img{
+        width: 100%;
+        height: 100%;
+        border-radius: 40px;
+        margin-bottom: 20px;
+    }
+
+    .certificado-titulo{
+        color: white;
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .certificado-institucion{
+        color: #ffffff97;
+        font-weight: 500;
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .certificado-ano{
+        color: #ffffff97;
+        font-weight: 500;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .btn-certificados{
+        width: 100%;
+        height: 40px;
+        background-color: #10B981;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+          transition: transform 0.3s ease;
+          cursor: pointer;
+    }
+
+    .btn-certificados:hover{
+        transform: scale(1.02);
+    }
+
+
+    .btn-certificados a {
+        text-decoration: none;
+        color: white;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
