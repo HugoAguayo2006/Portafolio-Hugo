@@ -6,7 +6,7 @@ export default function Projects() {
     {
       id: 1,
       title: "SMART MIRROR",
-      category: "Physical prototype ",
+      category: "Physical prototype",
       tech: "IoT",
       year: "2025",
       status: "Completed",
@@ -19,7 +19,7 @@ export default function Projects() {
       id: 2,
       title: "OMEGA App",
       category: "Fintech App",
-      tech: "JavaScript | React Native",
+      tech: "React Native",
       year: "2025",
       status: "Completed",
       description:
@@ -98,9 +98,8 @@ export default function Projects() {
               <option value="All">All Categories</option>
               <option value="Web Development">Web Development</option>
               <option value="Software">Software</option>
-              <option value="Game Development">Game Development</option>
-              <option value="Data">Data</option>
-              <option value="UI / UX">UI / UX</option>
+              <option value="Physical prototype">Physical prototype</option>
+
             </select>
 
             <select
@@ -108,11 +107,12 @@ export default function Projects() {
               onChange={(e) => setSelectedTech(e.target.value)}
             >
               <option value="All">All Technologies</option>
+              <option value="C++">C++</option>
               <option value="React">React</option>
+              <option value="React Native">React Navite</option>
               <option value="JavaScript">JavaScript</option>
-              <option value="API Integration">API Integration</option>
-              <option value="Unity">Unity</option>
               <option value="Python">Python</option>
+              <option value="IoT">IoT</option>
             </select>
 
             <select
