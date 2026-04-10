@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import TechCarousel from "../components/Carrusel";
-
+import Contacto from "../components/Contacto";
 import "./Home.css";
 const Home = () => {
     return(
@@ -110,6 +110,9 @@ const Home = () => {
             </div>
             
         </div>
+
+       <div className="line"></div>
+        <Contacto/>
 
         </>
     );

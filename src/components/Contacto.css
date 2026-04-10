@@ -1,0 +1,48 @@
+   .contactMe-page-1{
+    background-color: #0F172A;
+   }
+
+       /* izquierda */
+    .contactMe-form-1 {
+        position: relative;
+        background: #002115;
+        padding: 42px;
+        margin-bottom: 100px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+
+    .contactMe-form-1::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+
+        background: linear-gradient(180deg, #10B981, #ebf8e1, #cf5cff);
+
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .contact-card-1 {
+        background: #002115;
+        min-height: 110px;
+        padding: 22px 24px;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        text-decoration: none;
+        color: white;
+        transition: transform 0.22s ease, background 0.22s ease;
+    }
+
+    .location-card-1 {
+        background: #002115;
+        padding: 24px;
+        position: relative;
+        min-height: 30px;
+    }
+ 
