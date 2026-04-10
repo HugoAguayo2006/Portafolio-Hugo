@@ -1,6 +1,6 @@
 
 
-.home-intro{
+  .home-intro{
     background: #002115;
     min-height: 70vh; 
     display: flex;
@@ -159,7 +159,7 @@
 
   .project-card {
     color: #f5f5f5;
-    border-radius: 16px;
+
     padding: 20px;
     background: #0F172A;
     transition: all 0.3s ease;
@@ -262,12 +262,14 @@
     line-height: 1;
     padding: 0;
     transition: transform 0.3s ease;
+    transform: translateY(-15px);
+    text-decoration: none;
   }
 
   .arrow-btn {
-  flex-shrink: 0;
-}
+    flex-shrink: 0;
+  }
 
   .arrow-btn:hover {
-    transform: translateX(6px);
+    transform: translateY(-20px);
   }

@@ -66,7 +66,14 @@ const Home = () => {
                             <div className="project-bottom">
                             <div className="project-header">
                                 <h3 className="project-title">SMART MIRROR</h3>
-                                <button className="arrow-btn">→</button>
+                                <a 
+                                href="https://github.com/danihdz11/Smart-Mirror" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="arrow-btn"
+                                >
+                                →
+                                </a>
                             </div>
 
                             <p className="project-text">
@@ -79,6 +86,7 @@ const Home = () => {
                         </article>
 
                         <article className="project-card right-card">
+                            
                         <img
                             src="/images/home/omega-cover.webp"
                             alt="Neural Grid"
@@ -94,7 +102,14 @@ const Home = () => {
                             <div className="project-bottom">
                             <div className="project-header">
                                 <h3 className="project-title">OMEGA</h3>
-                                <button className="arrow-btn">→</button>
+                                <a 
+                                href="https://github.com/HugoAguayo2006/omega" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="arrow-btn"
+                                >
+                                →
+                                </a>
                             </div>
 
                             <p className="project-text">
