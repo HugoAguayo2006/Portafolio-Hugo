@@ -46,3 +46,7 @@
         min-height: 30px;
     }
  
+        .contact-card-1:hover {
+        transform: translateY(-4px);
+        background: #202027;
+    }
