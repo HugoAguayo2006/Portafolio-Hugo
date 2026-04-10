@@ -1,0 +1,29 @@
+    .aboutme-page{
+    background-color: #002115;
+   }
+
+    .aboutme-container{
+        margin-left: 80px;
+    }
+    
+
+    .aboutme-top{
+        display: flex;
+        flex-direction: column; 
+        align-items: center;    
+    }
+    
+    .letras-pequenas-arriba-centrado{
+        color: #10B981;
+        margin-left: 5px;
+        font-size: 20px;
+        padding-top: 30px;
+        margin-bottom: 2px;
+    }
+
+    .aboutme-title-text{
+        margin-bottom: 10px;
+        font-size: 90px;
+        font-weight: bold;
+        color: #ffffff97;
+    }

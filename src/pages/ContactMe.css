@@ -24,7 +24,7 @@
         color: #10B981;
         margin-left: 5px;
         font-size: 20px;
-        margin-bottom: 60px;
+        margin-bottom: 50px;
     }
 
     .contactMe-bottom {
@@ -121,7 +121,7 @@
 
 
 
-    /* Drecha */
+    /* derecha */
     .contact-right {
         display: flex;
         flex-direction: column;
@@ -255,3 +255,4 @@
     .form-status.error {
         color: #ef4444; /* rojo */
     }
+
