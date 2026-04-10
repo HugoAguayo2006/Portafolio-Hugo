@@ -12,13 +12,13 @@ const Navbar = ({children}) => {
 
                   <div className="nav-left">
 
-                    <NavLink to="/home" className="logo">HUGO'S_PORTAFOLIO</NavLink>
+                    <NavLink to="/" className="logo">HUGO'S_PORTAFOLIO</NavLink>
                 </div>
 
 
                 <div className="nav-center">
                     <p>
-                        <NavLink to="/home" className="link">HOME</NavLink>
+                        <NavLink to="/" className="link">HOME</NavLink>
                     </p>
                     <p>
                         <NavLink to="/about-me" className="link" >ABOUT ME</NavLink>
