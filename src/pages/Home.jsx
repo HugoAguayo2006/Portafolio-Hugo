@@ -9,7 +9,7 @@ const Home = () => {
             <div className="text-column">
                 <p className="letras-pequenas">AVAILABLE FOR NEW VENTURES</p>
                 <h1 className="main-text">
-                    FULL-STACK <span className='secondary-text'>DEVELOPER</span> / 
+                    FULL-STACK <span className='tercero-text'>DEVELOPER</span> / 
                     BUILDING FOR THE
                     FUTURE
                 </h1>

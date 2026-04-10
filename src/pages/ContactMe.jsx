@@ -77,7 +77,7 @@ export default function ContactMe() {
             <section className="contactMe-container">
                 <div className="contactMe-top">
                     <h1 className="contactMe-title-text">
-                        Let’s Build Something <span className='secondary-text'>Together</span>
+                        Let’s Build Something <span className='tercero-text'>Together</span>
                     </h1>
                     <p className="letras-pequenas-abajo">
                         // STATUS: OPEN TO COLLABORATION & NEW OPPORTUNITIES

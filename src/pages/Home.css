@@ -133,7 +133,7 @@
 
 
   .degradado-text {
-    background: linear-gradient(0.25turn, #10B981, #ebf8e1, #cf5cff);
+        background: linear-gradient(0.25turn, #F97316, #FACC15, #EF4444);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 

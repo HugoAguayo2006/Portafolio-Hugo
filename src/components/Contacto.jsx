@@ -78,7 +78,7 @@ export default function ContactMe() {
             <section className="contactMe-container">
                 <div className="contactMe-top">
                     <h1 className="contactMe-title-text">
-                        Start Your Project With <span className='secondary-text'>Me</span>
+                        Start Your Project With <span className='tercero-text'>Me</span>
                     </h1>
                     <p className="letras-pequenas-abajo">
                         // CONTACT ME FOR COLLABORATIONS & OPPORTUNITIES
