@@ -36,15 +36,15 @@ const Navbar = ({children}) => {
                 </div>
 
                   <div className="nav-right">
-                    <a 
-                    href="/pdf/CV_Jose_Hugo_Aguayo_Mendoza.pdf" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="btn-CV"
-                    >
-                    CV
-                    </a>
-                </div>
+                        <a 
+                        href="/pdf/CV_Jose_Hugo_Aguayo_Mendoza.pdf" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="btn-CV"
+                        >
+                        CV
+                        </a>
+                    </div>
             </div>
             {children}
         </>

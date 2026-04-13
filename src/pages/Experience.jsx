@@ -69,6 +69,14 @@ function Experience() {
                   <p>✦ Focus on software development and web technologies</p>
                   <p>✦ Academic projects in React, Python and C++</p>
                 </div>
+                        <a 
+                        href="/pdf/CV_Jose_Hugo_Aguayo_Mendoza.pdf" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="btn-proyecto"
+                        >
+                        View My Work
+                        </a>
               </div>
             </div>
 
