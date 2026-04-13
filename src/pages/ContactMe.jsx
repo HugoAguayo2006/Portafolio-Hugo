@@ -10,7 +10,7 @@ export default function ContactMe() {
         message: ''
     });
 
-    const [status, setStatus] = useState(null); // 🔥 nuevo estado
+    const [status, setStatus] = useState(null);
 
     const handleOnChange = (e) => {
         const { name, value } = e.target;
@@ -56,7 +56,7 @@ export default function ContactMe() {
                 message: ''
             });
 
-            // 🔥 opcional: desaparecer mensaje después de 4s
+        
             setTimeout(() => {
                 setStatus(null);
             }, 4000);
@@ -127,7 +127,6 @@ export default function ContactMe() {
                                 Send me your Message
                             </button>
 
-                            {/* 🔥 MENSAJES DENTRO DE LA UI */}
                             {status === "loading" && (
                                 <p className="form-status loading">Sending message...</p>
                             )}
