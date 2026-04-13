@@ -63,7 +63,6 @@ export default function Projects() {
   return (
     <section className="projects-page">
 
-
       <div className="projects-container">
         <div className="projects-top">
           <p className="projects-kicker">EXPLORE MY WORK</p>
