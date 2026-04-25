@@ -126,6 +126,40 @@ const AboutMe = () =>{
                             </div>
                         </div>
                     </div>
+                    <div className="certificate-card">
+                        <img src="/images/aboutme/diplomas/renison.webp" alt="Summer English Immersion with Robotics Program at Renison University College" />
+                        <div className="texto">
+                            <p className="certificado-titulo">Certificate of participation in the Summer English Immersion with Robotics Program</p>
+                            <p className="certificado-institucion">Renison University College, University of Waterloo</p>
+                            <p className="certificado-ano">2023</p>
+                            <div className="btn-certificados">
+                                <a
+                                href="/pdf/Renison-University-College.pdf" 
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >
+                                See certificate
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="certificate-card">
+                        <img src="/images/aboutme/diplomas/diploma-prepa.webp" alt="High School diploma from PrepaTec Santa Anita" />
+                        <div className="texto">
+                            <p className="certificado-titulo">High school diploma</p>
+                            <p className="certificado-institucion">PrepaTec Santa Anita</p>
+                            <p className="certificado-ano">2024</p>
+                            <div className="btn-certificados">
+                                <a
+                                href="/pdf/Diploma-Prepa.pdf" 
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >
+                                See diploma
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
   
         </div>
