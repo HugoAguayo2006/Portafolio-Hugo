@@ -1,17 +1,37 @@
 import "./Contacto.css";
 
-import { Link } from "react-router";
 import React, { useState } from "react";
 
 export default function ContactMe() {
     const [form, setForm] = useState({
         name: '',
         email: '',
-        subject: '',
         message: ''
     });
 
-    const [status, setStatus] = useState(null); // 🔥 nuevo estado
+    const [status, setStatus] = useState(null);
+    const [errors, setErrors] = useState({});
+
+    const validateForm = (values) => {
+        const nextErrors = {};
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!values.name.trim()) {
+            nextErrors.name = "Your name is required.";
+        }
+
+        if (!values.email.trim()) {
+            nextErrors.email = "Your email is required.";
+        } else if (!emailRegex.test(values.email.trim())) {
+            nextErrors.email = "Enter a valid email address.";
+        }
+
+        if (!values.message.trim()) {
+            nextErrors.message = "Tell me a little about your project.";
+        }
+
+        return nextErrors;
+    };
 
     const handleOnChange = (e) => {
         const { name, value } = e.target;
@@ -19,10 +39,34 @@ export default function ContactMe() {
             ...prev,
             [name]: value,
         }));
+
+        setErrors((prev) => {
+            if (!prev[name]) {
+                return prev;
+            }
+
+            const updatedErrors = { ...prev };
+            delete updatedErrors[name];
+            return updatedErrors;
+        });
     };
 
     const handleSendEmail = async (e) => {
         e.preventDefault();
+        const trimmedForm = {
+            name: form.name.trim(),
+            email: form.email.trim(),
+            message: form.message.trim(),
+        };
+        const validationErrors = validateForm(trimmedForm);
+
+        if (Object.keys(validationErrors).length > 0) {
+            setErrors(validationErrors);
+            setStatus(null);
+            return;
+        }
+
+        setErrors({});
 
         setStatus("loading");
 
@@ -33,10 +77,10 @@ export default function ContactMe() {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    name: form.name,
-                    email: form.email,
-                    subject: form.subject,
-                    message: form.message,
+                    name: trimmedForm.name,
+                    email: trimmedForm.email,
+                    subject: "Portfolio contact form",
+                    message: trimmedForm.message,
                 }),
             });
 
@@ -53,11 +97,9 @@ export default function ContactMe() {
             setForm({
                 name: '',
                 email: '',
-                subject: '',
                 message: ''
             });
 
-            // 🔥 opcional: desaparecer mensaje después de 4s
             setTimeout(() => {
                 setStatus(null);
             }, 4000);
@@ -89,7 +131,7 @@ export default function ContactMe() {
                     {/* COLUMNA IZQUIERDA */}
                     <div className="contactMe-form-1">
 
-                        <form onSubmit={handleSendEmail}>
+                        <form onSubmit={handleSendEmail} noValidate>
                             <div className="form-row">
                                 <div className="input-group">
                                     <label>FULL NAME</label>
@@ -99,7 +141,11 @@ export default function ContactMe() {
                                         placeholder="Your Name"
                                         value={form.name}
                                         onChange={handleOnChange}
+                                        aria-invalid={Boolean(errors.name)}
+                                        aria-describedby={errors.name ? "home-name-error" : undefined}
+                                        className={errors.name ? "input-error" : ""}
                                     />
+                                    {errors.name && <span id="home-name-error" className="field-error">{errors.name}</span>}
                                 </div>
 
                                 <div className="input-group">
@@ -110,7 +156,11 @@ export default function ContactMe() {
                                         placeholder="youremail@example.com"
                                         value={form.email}
                                         onChange={handleOnChange}
+                                        aria-invalid={Boolean(errors.email)}
+                                        aria-describedby={errors.email ? "home-email-error" : undefined}
+                                        className={errors.email ? "input-error" : ""}
                                     />
+                                    {errors.email && <span id="home-email-error" className="field-error">{errors.email}</span>}
                                 </div>
                             </div>
 
@@ -121,14 +171,17 @@ export default function ContactMe() {
                                     placeholder="Tell me about your project..."
                                     value={form.message}
                                     onChange={handleOnChange}
+                                    aria-invalid={Boolean(errors.message)}
+                                    aria-describedby={errors.message ? "home-message-error" : undefined}
+                                    className={errors.message ? "input-error" : ""}
                                 />
+                                {errors.message && <span id="home-message-error" className="field-error">{errors.message}</span>}
                             </div>
 
-                            <button type="submit" className="send-btn">
-                                Send me your Message
+                            <button type="submit" className="send-btn" disabled={status === "loading"}>
+                                {status === "loading" ? "Sending..." : "Send me your Message"}
                             </button>
 
-                            {/* 🔥 MENSAJES DENTRO DE LA UI */}
                             {status === "loading" && (
                                 <p className="form-status loading">Sending message...</p>
                             )}
