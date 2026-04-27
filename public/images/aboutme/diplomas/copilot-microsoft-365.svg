@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1177" role="img" aria-labelledby="title desc">
+  <title id="title">Certificado Santander Open Academy Copilot Microsoft 365</title>
+  <desc id="desc">Certificado de finalizacion de Copilot: domina la IA en Microsoft 365 otorgado a Jose Hugo Aguayo Mendoza.</desc>
+  <defs>
+    <pattern id="grid" width="88" height="88" patternUnits="userSpaceOnUse" patternTransform="rotate(42)">
+      <path d="M0 0H88M0 44H88" fill="none" stroke="#dbe4e7" stroke-width="2" opacity=".55"/>
+    </pattern>
+    <linearGradient id="leftPanel" x1="0" x2="1">
+      <stop offset="0" stop-color="#eef7f8"/>
+      <stop offset="1" stop-color="#f8fbfb"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" x2="1">
+      <stop offset="0" stop-color="#f0f8f9" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity=".15"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="2000" height="1177" fill="#fff"/>
+  <rect width="2000" height="1177" fill="url(#grid)" opacity=".72"/>
+  <rect width="735" height="1177" fill="url(#leftPanel)" opacity=".92"/>
+  <rect width="735" height="1177" fill="url(#grid)" opacity=".45"/>
+  <rect width="920" height="1177" fill="url(#fade)" opacity=".9"/>
+
+  <g transform="translate(88 184)">
+    <g transform="scale(1.05)">
+      <path d="M42 14C67 43 76 71 67 98C61 116 46 126 28 126C52 112 52 90 38 68C27 51 22 34 42 14Z" fill="#e40012"/>
+      <path d="M23 44C43 65 52 92 42 115C21 108 8 91 6 73C4 61 9 50 23 44Z" fill="#e40012"/>
+      <path d="M68 31C94 59 99 90 82 114C73 126 58 132 43 129C71 112 80 82 68 31Z" fill="#e40012"/>
+    </g>
+    <text x="94" y="64" fill="#e40012" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700">Santander</text>
+    <line x1="338" y1="20" x2="338" y2="80" stroke="#6b7280" stroke-width="3"/>
+    <text x="360" y="64" fill="#6b7280" font-family="Arial, Helvetica, sans-serif" font-size="47" font-weight="300">Open Academy</text>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif" transform="translate(830 260)">
+    <text x="0" y="0" fill="#111827" font-size="34" font-weight="400">Certificado de finalizacion de</text>
+    <text x="0" y="72" fill="#050505" font-size="44" font-weight="700">Jose Hugo Aguayo Mendoza</text>
+    <line x1="0" y1="140" x2="420" y2="140" stroke="#e5e7eb" stroke-width="2"/>
+    <text x="0" y="265" fill="#050505" font-size="56" font-weight="700">Copilot: domina la IA en Microsoft 365</text>
+    <text x="0" y="345" fill="#111827" font-size="30" font-weight="400">Curso terminado el 27 de abril de 2026</text>
+    <text x="0" y="414" fill="#111827" font-size="29" font-weight="400">8 Horas | 2 Modulos | Autoevaluacion</text>
+  </g>
+
+  <g opacity=".58" transform="translate(1000 855)">
+    <path d="M0 175C210 45 485 42 760 92C890 116 1004 119 1160 52" fill="none" stroke="#d7e1e4" stroke-width="2"/>
+    <path d="M0 198C214 72 488 64 762 113C896 137 1010 144 1165 75" fill="none" stroke="#d7e1e4" stroke-width="2"/>
+    <path d="M0 220C218 100 492 86 765 136C900 160 1016 170 1170 100" fill="none" stroke="#d7e1e4" stroke-width="2"/>
+    <path d="M0 244C222 128 496 110 768 158C904 182 1022 194 1175 124" fill="none" stroke="#d7e1e4" stroke-width="2"/>
+    <path d="M0 268C226 154 500 132 770 180C908 205 1028 220 1180 148" fill="none" stroke="#d7e1e4" stroke-width="2"/>
+    <path d="M0 292C230 180 505 154 774 204C912 228 1034 246 1185 172" fill="none" stroke="#d7e1e4" stroke-width="2"/>
+  </g>
+
+  <text x="88" y="1054" fill="#111827" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="400">Numero de serie: OA-2026-0427002537296</text>
+</svg>
