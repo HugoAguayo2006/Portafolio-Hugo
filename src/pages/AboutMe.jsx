@@ -177,6 +177,23 @@ const AboutMe = () =>{
                             </div>
                         </div>
                     </div>
+                    <div className="certificate-card">
+                        <img src="/images/aboutme/diplomas/santander-f1.webp" alt="Copilot: domina la IA en Microsoft 365 completion certificate from Santander Open Academy" />
+                        <div className="texto">
+                            <p className="certificado-titulo">Lidera a Toda Velocidad: Lecciones de la Fórmula 1</p>
+                            <p className="certificado-institucion">Santander Open Academy</p>
+                            <p className="certificado-ano">2026</p>
+                            <div className="btn-certificados">
+                                <a
+                                href="/pdf/Lidera-a-Toda-Velocidad-Lecciones-de-la-Formula-1.pdf" 
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >
+                                See certificate
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
   
         </div>
