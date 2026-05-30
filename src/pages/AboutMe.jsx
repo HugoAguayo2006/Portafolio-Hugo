@@ -195,14 +195,14 @@ const AboutMe = () =>{
                         </div>
                     </div>
                     <div className="certificate-card">
-                        <img src="/images/aboutme/diplomas/Diploma-Peer-Generación-25-26.webp" alt="Diploma Peer Generación 25-26" />
+                        <img src="/images/aboutme/diplomas/diploma-peer-generacion-25-26.webp" alt="Diploma Peer Generación 25-26" />
                         <div className="texto">
                             <p className="certificado-titulo">Diploma Peer Generación 25-26</p>
                             <p className="certificado-institucion">Instituto Tecnológico y de Estudios Superiores de Monterrey</p>
                             <p className="certificado-ano">2026</p>
                             <div className="btn-certificados">
                                 <a
-                                href="/pdf/Diploma-Peer-Generación-25-26.pdf" 
+                                href="/pdf/diploma-peer-generacion-25-26.pdf" 
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 >
