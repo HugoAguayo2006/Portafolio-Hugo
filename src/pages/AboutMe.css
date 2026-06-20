@@ -1,5 +1,6 @@
     .aboutme-page{
     background-color: #002115;
+    overflow-x: hidden;
 
    }
 
@@ -12,30 +13,34 @@
     .letras-pequenas-arriba-centrado{
         color: #10B981;
         margin-left: 5px;
-        font-size: 20px;
+        font-size: clamp(14px, 1.4vw, 20px);
         padding-top: 30px;
         margin-bottom: 2px;
     }
 
     .aboutme-title-text{
         margin-bottom: 10px;
-        font-size: 90px;
+        font-size: clamp(42px, 6vw, 90px);
         font-weight: bold;
         color: #ffffff97;
+        line-height: 1.05;
+        text-align: center;
+        overflow-wrap: anywhere;
         
     }
 
     .aboutme-bottom {
         display: flex;
-        gap: 20px; 
+        gap: clamp(24px, 4vw, 48px); 
         padding-top: 0px;
-        padding-bottom: 100px;
+        padding: 0 clamp(16px, 5vw, 60px) clamp(28px, 3vw, 44px);
     }
 
     .aboutme-izquieda{
         flex: 1; /* más chica */
-        margin-left: 55px;
+        margin-left: 0;
         overflow: hidden; 
+        min-width: min(360px, 100%);
     }
 
     .aboutme-izquieda img {
@@ -60,15 +65,17 @@
     }
 
     .aboutme-derecha p{
-        font-size: 28px;
+        font-size: clamp(17px, 2vw, 28px);
         color: #ffffff97;
         width: 95%;
+        line-height: 1.45;
+        margin-bottom: 14px;
         
     }
 
     .aboutme-fondo-cita {
         width: 100%;
-        height: 400px;
+        min-height: clamp(300px, 32vw, 400px);
         background: url('/yoda.webp');
         background-size: cover;     
         background-position: center 25%;
@@ -78,14 +85,14 @@
     }
 
     .quote-icon {
-        font-size: 300px;
+        font-size: clamp(120px, 18vw, 300px);
         color: #00ff88; 
         display: block;
-        margin-bottom: -200px;
+        margin-bottom: clamp(-150px, -10vw, -80px);
     }
 
     .quote-text {
-    font-size: 60px;
+    font-size: clamp(30px, 5vw, 60px);
     font-weight: 800;
     color: #cbd5e1;
     line-height: 1.2;
@@ -106,17 +113,17 @@
     margin-top: 20px;
     color: #00ff88;
     letter-spacing: 4px;
-    font-size: 24px;
+    font-size: clamp(15px, 2vw, 24px);
     font-weight:600;
     }
 
     .certificates-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 COLUMNAS */
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 24px;
         max-width: 1400px;
         margin: 0 auto;
-        padding: 40px;
+        padding: clamp(20px, 4vw, 40px);
     }
 
     .tercero-text {
@@ -130,12 +137,13 @@
         flex-direction: column; 
         align-items: center;  
         margin-top: 50px;
+        padding: 0 16px;
     }
 
     .certificate-card {
         background: #0F172A;
-        border-radius: 20px;
-        padding: 20px;
+        border-radius: 16px;
+        padding: clamp(14px, 2vw, 20px);
         border: 1px solid rgba(255,255,255,0.08);
         display: flex;
         flex-direction: column;
@@ -161,7 +169,7 @@
 
     .certificate-card img {
         width: 100%;
-        height: 340px;     
+        height: clamp(220px, 24vw, 340px);     
         object-fit: contain; 
         background: #0b1220;  
         border-radius: 18px;
@@ -173,27 +181,27 @@
     .certificado-titulo{
         color: white;
         font-weight: 700;
-        font-size: 18px;
+        font-size: clamp(16px, 1.2vw, 18px);
         margin-bottom: 10px;
     }
 
     .certificado-institucion{
         color: #ffffff97;
         font-weight: 500;
-        font-size: 16px;
+        font-size: clamp(14px, 1.1vw, 16px);
         margin-bottom: 5px;
     }
 
     .certificado-ano{
         color: #ffffff97;
         font-weight: 500;
-        font-size: 16px;
+        font-size: clamp(14px, 1.1vw, 16px);
         margin-bottom: 15px;
     }
 
     .btn-certificados{
         width: 100%;
-        height: 40px;
+        min-height: 44px;
         background-color: #10B981;
         display: flex;
         justify-content: center;
@@ -220,3 +228,57 @@
         font-size: 16px;
         font-weight: 600;
     }
+
+@media (max-width: 900px) {
+    .aboutme-bottom {
+        flex-direction: column;
+    }
+
+    .aboutme-izquieda {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .aboutme-izquieda img {
+        max-height: 560px;
+        object-position: center top;
+    }
+
+    .aboutme-derecha p {
+        width: 100%;
+    }
+}
+
+@media (max-width: 520px) {
+    .letras-pequenas-arriba-centrado {
+        padding-left: 14px;
+        padding-right: 14px;
+        text-align: center;
+    }
+
+    .aboutme-bottom {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .aboutme-fondo-cita {
+        padding: 0 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .quote-icon {
+        display: none;
+    }
+
+    .quote-text {
+        line-height: 1.1;
+    }
+
+    .certificates-grid {
+        grid-template-columns: 1fr;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+}

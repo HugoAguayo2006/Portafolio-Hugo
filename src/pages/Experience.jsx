@@ -113,7 +113,7 @@ function Experience() {
           <div className="experience-education-right">
             <div className="education-card-morado">
               <div className="education-card-image">
-                <img src="/images/schools/tec1.webp" alt="Tecnológico de Monterrey" />
+                <img src="/images/experience/schools/tec-gdl.webp" alt="Tecnológico de Monterrey" />
               </div>
 
               <div className="education-card-content">

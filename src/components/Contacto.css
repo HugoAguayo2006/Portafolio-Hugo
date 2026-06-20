@@ -1,13 +1,14 @@
    .contactMe-page-1{
     background-color: #0F172A;
+    overflow-x: hidden;
    }
 
        /* izquierda */
     .contactMe-form-1 {
         position: relative;
         background: #002115;
-        padding: 42px;
-        margin-bottom: 100px;
+        padding: clamp(22px, 3vw, 42px);
+        margin-bottom: clamp(48px, 7vw, 100px);
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
     }
@@ -48,7 +49,7 @@
     .contact-card-1 {
         background: #002115;
         min-height: 110px;
-        padding: 22px 24px;
+        padding: clamp(18px, 2vw, 22px);
         display: flex;
         align-items: center;
         gap: 18px;
@@ -68,3 +69,16 @@
         transform: translateY(-4px);
         background: #202027;
     }
+
+@media (max-width: 640px) {
+    .contactMe-form-1 {
+        border-radius: 16px;
+    }
+}
+
+@media (max-width: 360px) {
+    .contact-card-1 {
+        align-items: flex-start;
+        gap: 14px;
+    }
+}

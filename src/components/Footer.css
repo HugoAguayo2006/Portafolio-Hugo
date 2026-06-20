@@ -4,11 +4,12 @@
   justify-content: space-between;
   align-items: center;
   background-color: #0F172A;
-  height: 100px;
-  padding: 0 40px;
+  min-height: 100px;
+  padding: 20px clamp(16px, 4vw, 40px);
   position: relative;
   width: 100%;
   border-top: 8px solid #10B981; 
+  gap: 24px;
 }
 
 /* IZQUIERDA */
@@ -17,8 +18,9 @@
     flex: 2;
     justify-content: flex-start;
     font-weight: 800;
-    font-size: 18px;
+    font-size: clamp(14px, 1.2vw, 18px);
     color: #ffffff97;
+    line-height: 1.5;
 }
 
 .footer-left a {
@@ -43,6 +45,7 @@
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .whatsapp{
@@ -60,7 +63,7 @@
     align-items: center;    
 
     font-weight: 800;
-    font-size: 18px;
+    font-size: clamp(14px, 1.2vw, 18px);
 
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 
@@ -80,7 +83,7 @@
     align-items: center;    
 
     font-weight: 800;
-    font-size: 18px;
+    font-size: clamp(14px, 1.2vw, 18px);
 
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 
@@ -101,7 +104,7 @@
     align-items: center;    
 
     font-weight: 800;
-    font-size: 18px;
+    font-size: clamp(14px, 1.2vw, 18px);
 
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 
@@ -128,3 +131,38 @@
     margin-right: 5px;
 }
 
+@media (max-width: 1024px) {
+  .container-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-right {
+    display: none;
+  }
+
+  .contenedor-botones {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 520px) {
+  .container-footer {
+    align-items: stretch;
+    text-align: left;
+  }
+
+  .contenedor-botones {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .whatsapp,
+  .linkedln,
+  .github {
+    width: 100%;
+    min-height: 46px;
+  }
+}

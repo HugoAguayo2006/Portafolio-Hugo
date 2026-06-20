@@ -9,10 +9,16 @@ html, body, #root {
   min-height: 100vh;
 }
 
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #0F172A;
   color: white;
   font-family: Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 #root {
@@ -24,4 +30,14 @@ body {
   width: 100%;
   height: 5px;
   background: linear-gradient(to right, transparent, #10B981, transparent);
+}
+
+img {
+  max-width: 100%;
+}
+
+@media (max-width: 1366px) {
+  main {
+    padding-top: 92px;
+  }
 }
