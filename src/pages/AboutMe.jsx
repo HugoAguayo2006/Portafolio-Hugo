@@ -211,6 +211,57 @@ const AboutMe = () =>{
                             </div>
                         </div>
                     </div>
+                    <div className="certificate-card">
+                        <img src="/images/aboutme/diplomas/FIFA World Cup 2026 Volunteer Certificate_EN.jpeg" alt="FIFA World Cup 2026 volunteer certificate in English" />
+                        <div className="texto">
+                            <p className="certificado-titulo">FIFA World Cup 2026 Volunteer Certificate — English</p>
+                            <p className="certificado-institucion">FIFA World Cup 2026 Volunteer Program</p>
+                            <p className="certificado-ano">2026</p>
+                            <div className="btn-certificados">
+                                <a
+                                href="/pdf/FIFA World Cup 2026 Volunteer Certificate_EN.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >
+                                See certificate
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="certificate-card">
+                        <img src="/images/aboutme/diplomas/FIFA World Cup 2026 Volunteer Certificate_SPA.jpeg" alt="Certificado de voluntariado de la Copa Mundial de la FIFA 2026 en español" />
+                        <div className="texto">
+                            <p className="certificado-titulo">FIFA World Cup 2026 Volunteer Certificate — Spanish</p>
+                            <p className="certificado-institucion">FIFA World Cup 2026 Volunteer Program</p>
+                            <p className="certificado-ano">2026</p>
+                            <div className="btn-certificados">
+                                <a
+                                href="/pdf/FIFA World Cup 2026 Volunteer Certificate_SPA.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >
+                                See certificate
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="certificate-card">
+                        <img src="/images/aboutme/diplomas/FIFA World Cup 2026 Volunteer Letter of Recommendation (incl. hours).jpeg" alt="FIFA World Cup 2026 volunteer letter of recommendation" />
+                        <div className="texto">
+                            <p className="certificado-titulo">FIFA World Cup 2026 Volunteer Letter of Recommendation</p>
+                            <p className="certificado-institucion">FIFA World Cup 2026 Volunteer Program</p>
+                            <p className="certificado-ano">2026 · 32 volunteering hours</p>
+                            <div className="btn-certificados">
+                                <a
+                                href="/pdf/FIFA World Cup 2026 Volunteer Letter of Recommendation (incl. hours).pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >
+                                See letter
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
   
         </div>
