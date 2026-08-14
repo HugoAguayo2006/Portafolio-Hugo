@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./Carrusel.css";
 
 const techs = [
-  { name: "C+", image: "/icons/logos/cplusplus.webp" },
+  { name: "C++", image: "/icons/logos/cplusplus.webp" },
   { name: "Python", image: "/icons/logos/python.webp" },
   { name: "JavaScript", image: "/icons/logos/JavaScrip.webp" },
   { name: "React", image: "/icons/logos/react.webp" },
