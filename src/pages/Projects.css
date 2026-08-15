@@ -282,6 +282,13 @@
   margin-top: auto;
 }
 
+.project-link-group {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+}
+
 .project-link-btn {
   display: inline-flex;
   justify-content: center;
@@ -300,6 +307,16 @@
 .project-link-btn:hover {
   transform: scale(1.03);
   box-shadow: 0 10px 22px rgba(16, 185, 129, 0.25);
+}
+
+.project-link-btn-secondary {
+  background: transparent;
+  border: 2px solid #10B981;
+  color: #10B981;
+}
+
+.project-link-btn-secondary:hover {
+  background: rgba(16, 185, 129, 0.1);
 }
 
 .projects-empty-state {

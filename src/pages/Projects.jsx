@@ -59,8 +59,9 @@ const projects = [
     status: "Completed",
     description:
       "Chat application built with React and PostgreSQL, designed to manage conversations through a full-stack architecture with persistent data and a modern web interface.",
-    image: "/images/proyectos/chat.webp",
-    link: "https://chatify-five-ecru.vercel.app",
+    image: "/images/proyectos/chatify.jpeg",
+    videoLink: "https://www.youtube.com/watch?v=boAvT8zibRI",
+    repositoryLink: "https://github.com/HugoAguayo2006/chatify/tree/UI-develop",
   },
 ];
 
@@ -212,14 +213,35 @@ export default function Projects() {
                   <p className="project-description">{project.description}</p>
 
                   <div className="project-card-footer">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-link-btn"
-                    >
-                      View Project
-                    </a>
+                    {project.videoLink && project.repositoryLink ? (
+                      <div className="project-link-group">
+                        <a
+                          href={project.videoLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="project-link-btn"
+                        >
+                          Video
+                        </a>
+                        <a
+                          href={project.repositoryLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="project-link-btn project-link-btn-secondary"
+                        >
+                          Repository
+                        </a>
+                      </div>
+                    ) : (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-link-btn"
+                      >
+                        View Project
+                      </a>
+                    )}
                   </div>
                 </div>
               </article>
