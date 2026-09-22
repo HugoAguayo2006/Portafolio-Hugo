@@ -2,12 +2,13 @@
 
   .home-intro{
     background: #002115;
-    min-height: 70vh; 
+    min-height: 70vh;
+    min-height: 70svh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: clamp(24px, 4vw, 40px);
-    padding: clamp(32px, 6vw, 80px) clamp(16px, 5vw, 60px);
+    padding: clamp(32px, 6vw, 80px) max(clamp(16px, 5vw, 60px), env(safe-area-inset-right)) clamp(32px, 6vw, 80px) max(clamp(16px, 5vw, 60px), env(safe-area-inset-left));
   }
 
   .text-column {
@@ -38,7 +39,7 @@
     font-weight: bold;
     color: #ffffff97;
     line-height: 1;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
   }
 
   .secondary-text {
@@ -117,6 +118,8 @@
     width: 90%;
     max-width: 700px;
     height: auto;
+    aspect-ratio: 1206 / 1493;
+    object-fit: cover;
     border-radius: 12px;
     border: 5px solid transparent;
     border-radius: 12px;
@@ -127,10 +130,11 @@
 
   .home-projects{
       background: #002115;
-      min-height: 80vh; 
+      min-height: 80vh;
+      min-height: 80svh;
       display: flex;
       align-items: center;  
-      padding: clamp(40px, 6vw, 80px) clamp(16px, 5vw, 60px);
+      padding: clamp(40px, 6vw, 80px) max(clamp(16px, 5vw, 60px), env(safe-area-inset-right)) clamp(40px, 6vw, 80px) max(clamp(16px, 5vw, 60px), env(safe-area-inset-left));
   }
 
   .texto-recent-projects{
@@ -152,7 +156,7 @@
     font-weight: 800;
     margin-top: 0;
     line-height: 1;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
 
   }
 
@@ -205,6 +209,15 @@
     object-fit: cover;
     display: block;
     border-radius: 8px;
+  }
+
+  .home-project-image {
+    object-fit: contain;
+    padding: clamp(36px, 6vw, 84px);
+    background:
+      radial-gradient(circle at 25% 20%, rgba(16, 185, 129, 0.3), transparent 40%),
+      radial-gradient(circle at 80% 75%, rgba(207, 92, 255, 0.25), transparent 42%),
+      #071c17;
   }
 
   .project-content {
@@ -275,6 +288,12 @@
     cursor: pointer;
     line-height: 1;
     padding: 0;
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     transition: transform 0.3s ease;
     transform: translateY(-15px);
     text-decoration: none;
@@ -309,8 +328,8 @@
 @media (max-width: 520px) {
   .home-intro,
   .home-projects {
-    padding-left: 14px;
-    padding-right: 14px;
+    padding-left: max(14px, env(safe-area-inset-left));
+    padding-right: max(14px, env(safe-area-inset-right));
   }
 
   .btn-container {
@@ -334,3 +353,12 @@
   .arrow-btn:hover {
     transform: translateY(-20px);
   }
+
+@media (hover: none) {
+  .btn-morado:hover,
+  .btn:hover,
+  .project-card:hover,
+  .arrow-btn:hover {
+    transform: none;
+  }
+}

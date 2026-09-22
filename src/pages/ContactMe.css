@@ -1,12 +1,13 @@
    .contactMe-page{
     background-color: #002115;
     overflow-x: hidden;
+    min-width: 0;
    }
    
    .contactMe-container{
         width: min(100%, 1500px);
         margin: 0 auto;
-        padding: 0 clamp(14px, 4vw, 40px);
+        padding: 0 max(clamp(14px, 4vw, 40px), env(safe-area-inset-right)) 0 max(clamp(14px, 4vw, 40px), env(safe-area-inset-left));
     }
     
     .contactMe-title-text{
@@ -16,7 +17,7 @@
         color: #ffffff97;
         padding-top: clamp(40px, 6vw, 60px);
         line-height: 1.05;
-        overflow-wrap: anywhere;
+        overflow-wrap: break-word;
     }
     
     .secondary-text {
@@ -38,6 +39,10 @@
         grid-template-columns: minmax(0, 1.4fr) minmax(320px, 0.9fr);
         gap: clamp(28px, 4vw, 40px);
         align-items: start;
+    }
+
+    .contactMe-bottom > * {
+        min-width: 0;
     }
 
     /* izquierda */
@@ -74,6 +79,7 @@
     .input-group {
         display: flex;
         flex-direction: column;
+        min-width: 0;
     }
 
     .input-group label {
@@ -95,11 +101,14 @@
         border-radius: 20px;
         font-family: Arial, sans-serif;
         width: 100%;
+        min-height: 54px;
+        scroll-margin-top: 100px;
     }
 
     .input-group textarea {
-        resize: none;
+        resize: vertical;
         min-height: 180px;
+        max-height: 60dvh;
     }
 
     .input-error {
@@ -181,6 +190,7 @@
         text-decoration: none;
         color: white;
         transition: transform 0.22s ease, background 0.22s ease;
+        min-width: 0;
     }
 
     .contact-card:hover {
@@ -262,6 +272,7 @@
         letter-spacing: 2px;
         font-weight: 700;
         margin-bottom: 0px;
+        overflow-wrap: anywhere;
     }
 
 
@@ -297,8 +308,8 @@
 
 @media (max-width: 640px) {
     .contactMe-container {
-        padding-left: 14px;
-        padding-right: 14px;
+        padding-left: max(14px, env(safe-area-inset-left));
+        padding-right: max(14px, env(safe-area-inset-right));
     }
 
     .contactMe-title-text {
@@ -328,5 +339,12 @@
     .contact-card-icon {
         width: 46px;
         height: 46px;
+    }
+}
+
+@media (hover: none) {
+    .send-btn:hover,
+    .contact-card:hover {
+        transform: none;
     }
 }

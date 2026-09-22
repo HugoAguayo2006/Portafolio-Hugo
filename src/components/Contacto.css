@@ -11,6 +11,7 @@
         margin-bottom: clamp(48px, 7vw, 100px);
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
+        min-width: 0;
     }
 
 
@@ -56,6 +57,7 @@
         text-decoration: none;
         color: white;
         transition: transform 0.22s ease, background 0.22s ease;
+        min-width: 0;
     }
 
     .location-card-1 {
@@ -73,6 +75,12 @@
 @media (max-width: 640px) {
     .contactMe-form-1 {
         border-radius: 16px;
+    }
+}
+
+@media (hover: none) {
+    .contact-card-1:hover {
+        transform: none;
     }
 }
 

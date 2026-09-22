@@ -38,6 +38,7 @@ const techs = [
 
 export default function TechCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   const prevSlide = () => {
     setActiveIndex((prev) => (prev === 0 ? techs.length - 1 : prev - 1));
@@ -48,12 +49,16 @@ export default function TechCarousel() {
   };
 
   useEffect(() => {
+    if (isPaused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return undefined;
+    }
+
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev === techs.length - 1 ? 0 : prev + 1));
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isPaused]);
 
   const getVisibleTechs = () => {
     const visible = [];
@@ -73,13 +78,22 @@ export default function TechCarousel() {
   const visibleTechs = getVisibleTechs();
 
   return (
-    <section className="tech-section">
-      <h2 className="tech-title">
+    <section className="tech-section" aria-labelledby="tech-stack-title">
+      <h2 className="tech-title" id="tech-stack-title">
         My Tech <span>Stack</span>
       </h2>
 
-      <div className="tech-card">
-        <button className="nav-btn nav-btn-left" onClick={prevSlide}>
+      <div
+        className="tech-card"
+        role="region"
+        aria-roledescription="carrusel"
+        aria-label="Tecnologías"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+        onFocusCapture={() => setIsPaused(true)}
+        onBlurCapture={() => setIsPaused(false)}
+      >
+        <button type="button" className="nav-btn nav-btn-left" onClick={prevSlide} aria-label="Tecnología anterior">
           <span>‹</span>
         </button>
 
@@ -91,6 +105,7 @@ export default function TechCarousel() {
               <div
                 key={`${tech.name}-${tech.realIndex}`}
                 className={`tech-item ${isActive ? "active" : ""}`}
+                aria-current={isActive ? "true" : undefined}
               >
                 <div className="tech-icon-box">
                   <img src={tech.image} alt={tech.name} className="tech-icon" />
@@ -101,7 +116,7 @@ export default function TechCarousel() {
           })}
         </div>
 
-        <button className="nav-btn nav-btn-right" onClick={nextSlide}>
+        <button type="button" className="nav-btn nav-btn-right" onClick={nextSlide} aria-label="Tecnología siguiente">
           <span>›</span>
         </button>
       </div>

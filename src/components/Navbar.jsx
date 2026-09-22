@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css"
 
@@ -8,14 +8,31 @@ const Navbar = ({children}) => {
 
     const closeMenu = () => setIsMenuOpen(false);
 
+    useEffect(() => {
+        const handleEscape = (event) => {
+            if (event.key === "Escape") {
+                setIsMenuOpen(false);
+            }
+        };
+        const handleHistoryNavigation = () => setIsMenuOpen(false);
+
+        window.addEventListener("keydown", handleEscape);
+        window.addEventListener("popstate", handleHistoryNavigation);
+        return () => {
+            window.removeEventListener("keydown", handleEscape);
+            window.removeEventListener("popstate", handleHistoryNavigation);
+        };
+    }, []);
+
     return(
         <>
-            <div className={`container-navbar ${isMenuOpen ? "menu-open" : ""}`}>
+            <header className={`container-navbar ${isMenuOpen ? "menu-open" : ""}`}>
                 <button
                     type="button"
                     className="menu-toggle"
                     aria-label={isMenuOpen ? "Cerrar menu de navegacion" : "Abrir menu de navegacion"}
                     aria-expanded={isMenuOpen}
+                    aria-controls="primary-navigation"
                     onClick={() => setIsMenuOpen((prev) => !prev)}
                 >
                     <span></span>
@@ -29,24 +46,17 @@ const Navbar = ({children}) => {
                 </div>
 
 
-                <div className={`nav-center ${isMenuOpen ? "nav-center-open" : ""}`}>
-                    <p>
+                <nav
+                    id="primary-navigation"
+                    aria-label="Navegación principal"
+                    className={`nav-center ${isMenuOpen ? "nav-center-open" : ""}`}
+                >
                         <NavLink to="/" className="link" onClick={closeMenu}>HOME</NavLink>
-                    </p>
-                    <p>
                         <NavLink to="/about-me" className="link" onClick={closeMenu}>ABOUT ME</NavLink>
-                    </p>
-                    <p>
                         <NavLink to="/experience" className="link" onClick={closeMenu}>EXPERIENCE</NavLink>
-                    </p>
-                    <p>
                         <NavLink to="/projects" className="link" onClick={closeMenu}>PROJECTS</NavLink>
-                    </p>
-                    <p>
                         <NavLink to="/contact-me" className="link" onClick={closeMenu}>CONTACT ME</NavLink>
-                    </p>
-
-                </div>
+                </nav>
 
                   <div className="nav-right">
                         <a 
@@ -58,7 +68,7 @@ const Navbar = ({children}) => {
                         CV
                         </a>
                     </div>
-            </div>
+            </header>
             {children}
         </>
     );

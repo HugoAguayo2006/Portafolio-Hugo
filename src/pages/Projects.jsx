@@ -3,6 +3,53 @@ import "./Projects.css";
 
 const projects = [
   {
+    id: 6,
+    title: "Courier AI / RouteBoost",
+    category: "AI / Logistics",
+    tech: "React / FastAPI / Python",
+    year: "2026",
+    status: "Completed",
+    description:
+      "Real-time logistics platform developed for the 36-hour HackMTY 2026 Infosys challenge. It optimizes courier order acceptance and routing with React, TypeScript, Python, FastAPI, WebSockets, OpenStreetMap, NetworkX, OSMnx, and the Gemini API.",
+    image: "/favicon.svg",
+    link: "https://github.com/HugoAguayo2006/RouteBoost",
+  },
+  {
+    id: 7,
+    title: "WidKueski",
+    category: "Chrome Extension",
+    tech: "React / TypeScript / Plasmo",
+    year: "2026",
+    status: "Completed",
+    description:
+      "Plasmo-based Chrome extension that integrates Kueski Pay financing into e-commerce sites. Built with React, TypeScript, Plasmo, SerpApi, FastAPI, PostgreSQL, and SQLAlchemy.",
+    image: "/favicon.svg",
+    link: "https://github.com/HugoAguayo2006/widKueski",
+  },
+  {
+    id: 8,
+    title: "Netflix Simulation Program",
+    category: "Software",
+    tech: "C++ / OOP",
+    year: "2025",
+    status: "Completed",
+    description:
+      "C++ streaming-service simulation built with object-oriented programming principles, including inheritance, polymorphism, operator overloading, CSV-based ratings, and movie and series management.",
+    image: "/favicon.svg",
+    link: "https://github.com/HugoAguayo2006/Netflix-Simulation-Program",
+  },
+  {
+    id: 9,
+    title: "App Salud Infantil",
+    category: "Health Tech",
+    tech: "VBA / ActiveX",
+    year: "2025",
+    status: "Completed",
+    description:
+      "Application developed for Pasitos Education and Health using VBA macros and ActiveX controls to provide health recommendations based on children’s symptoms.",
+    image: "/favicon.svg",
+  },
+  {
     id: 1,
     title: "SMART MIRROR",
     category: "Physical prototype",
@@ -117,9 +164,10 @@ export default function Projects() {
 
         <div className="projects-toolbar">
           <div className="projects-search-box">
-            <span className="projects-search-icon">⌕</span>
+            <span className="projects-search-icon" aria-hidden="true">⌕</span>
             <input
               type="text"
+              aria-label="Search projects"
               placeholder="Search by title, description, category or technology..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
@@ -128,6 +176,7 @@ export default function Projects() {
 
           <div className="projects-filters">
             <select 
+              aria-label="Filter by category"
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
             >
@@ -137,10 +186,14 @@ export default function Projects() {
               <option value="Physical prototype">Physical prototype</option>
               <option value="Game Simulation">Game Simulation</option>
               <option value="Full Stack App">Full Stack App</option>
+              <option value="AI / Logistics">AI / Logistics</option>
+              <option value="Chrome Extension">Chrome Extension</option>
+              <option value="Health Tech">Health Tech</option>
 
             </select>
 
             <select
+              aria-label="Filter by technology"
               value={selectedTech}
               onChange={(e) => setSelectedTech(e.target.value)}
             >
@@ -154,9 +207,14 @@ export default function Projects() {
               <option value="IoT">IoT</option>
               <option value="Pokemon API">Pokemon API</option>
               <option value="PostgreSQL">PostgreSQL</option>
+              <option value="TypeScript">TypeScript</option>
+              <option value="FastAPI">FastAPI</option>
+              <option value="Plasmo">Plasmo</option>
+              <option value="VBA">VBA</option>
             </select>
 
             <select
+              aria-label="Filter by status"
               value={selectedStatus}
               onChange={(e) => setSelectedStatus(e.target.value)}
             >
@@ -166,6 +224,7 @@ export default function Projects() {
             </select>
 
             <button
+              type="button"
               className="projects-clear-btn"
               onClick={() => {
                 setSearch("");
@@ -179,7 +238,7 @@ export default function Projects() {
           </div>
         </div>
 
-        <div className="projects-results-bar">
+        <div className="projects-results-bar" aria-live="polite">
           <p>
             Showing <span>{filteredProjects.length}</span> project
             {filteredProjects.length !== 1 ? "s" : ""}
@@ -191,7 +250,7 @@ export default function Projects() {
             filteredProjects.map((project) => (
               <article className="project-card-1" key={project.id}>
                 <div className="project-card-image-wrapper">
-                  <img src={project.image} alt={project.title} />
+                  <img src={project.image} alt={project.title} loading="lazy" />
                   <div className="project-card-badges">
                     <span className="project-badge category-badge">
                       {project.category}
@@ -232,7 +291,7 @@ export default function Projects() {
                           Repository
                         </a>
                       </div>
-                    ) : (
+                    ) : project.link ? (
                       <a
                         href={project.link}
                         target="_blank"
@@ -241,6 +300,10 @@ export default function Projects() {
                       >
                         View Project
                       </a>
+                    ) : (
+                      <span className="project-link-btn project-link-btn-disabled" aria-disabled="true">
+                        Private Academic Project
+                      </span>
                     )}
                   </div>
                 </div>

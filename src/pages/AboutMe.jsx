@@ -27,15 +27,19 @@ const AboutMe = () =>{
                     <div className="aboutme-derecha">
                         
                         <p>
-                        Hello, I’m Jose Hugo Aguayo Mendoza, but you can call me Hugo. I am a Computer Engineering student at Tecnológico de Monterrey, with a strong passion for technology and continuous learning.
+                        Hello, I’m Jose Hugo Aguayo Mendoza, but you can call me Hugo. I am a Computer Science and Technology Engineering student at Tecnológico de Monterrey, graduating in June 2028, with a current GPA of 97.61/100.
                         </p>
 
                         <p>
-                        My skill set includes programming in C++, Python, and React (JavaScript), combining solid software development fundamentals with modern, scalable web applications.
+                        My skill set spans Python, C++, JavaScript, TypeScript, React, React Native, FastAPI, SQL databases, AI integrations, testing, and modern cloud deployment.
                         </p>
 
                         <p>
-                        I enjoy collaborating in team environments to solve problems while continuously strengthening my abilities across different programming languages and digital tools.
+                        I am the founder and web developer behind NIVOSTECH, where I build and maintain responsive, multilingual websites for schools and organizations while managing deployment, SEO, domains, and client requirements.
+                        </p>
+
+                        <p>
+                        I also enjoy hackathons, mentoring younger engineering students, and collaborating in team environments to solve real-world problems through software and hardware.
                         </p>
 
                         <p>
@@ -43,7 +47,7 @@ const AboutMe = () =>{
                         </p>
 
                         <p>
-                        Currently, I am seeking opportunities to grow in the software field, and I’m excited to connect with people who share my interest in continuous learning.
+                        I speak Spanish natively and English at a B2 level, and I am currently seeking opportunities to continue growing in software engineering and technology.
                         </p>
 
                     </div>

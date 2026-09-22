@@ -52,22 +52,22 @@ const Home = () => {
                         
                         <article className="project-card left-card">
                         <img
-                            src="/images/home/smart-mirror.webp"
-                            alt="Kinetic Dash"
-                            className="project-image"
+                            src="/favicon.svg"
+                            alt="Courier AI"
+                            className="project-image home-project-image"
                         />
 
                         <div className="project-content">
                             <div className="project-tags">
                             <span className="tag active">• Completed</span>
-                            <span className="tag">IoT</span>
+                            <span className="tag">HackMTY 2026</span>
                             </div>
 
                             <div className="project-bottom">
                             <div className="project-header">
-                                <h3 className="project-title">SMART MIRROR</h3>
-                                <a 
-                                href="https://github.com/danihdz11/Smart-Mirror" 
+                                <h3 className="project-title">COURIER AI</h3>
+                                <a
+                                href="https://github.com/HugoAguayo2006/RouteBoost"
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 className="arrow-btn"
@@ -77,9 +77,8 @@ const Home = () => {
                             </div>
 
                             <p className="project-text">
-                                Smart mirror built with React, Node.js, OpenCV, Python, Raspberry Pi, MongoDB, MySQL, and more, featuring facial and voice
-                                recognition, IoT connectivity, and personalized information display. Winner of 1st Place at the Engineering Expo, Tec de Monterrey
-                                (Physical Prototype).
+                                Real-time logistics platform built for the 36-hour HackMTY 2026 Infosys challenge. It combines React, TypeScript, FastAPI,
+                                WebSockets, OpenStreetMap, NetworkX, OSMnx, and Gemini API to optimize courier order acceptance and routing.
                             </p>
                             </div>
                         </div>
@@ -88,22 +87,22 @@ const Home = () => {
                         <article className="project-card right-card">
                             
                         <img
-                            src="/images/home/omega-cover.webp"
-                            alt="Neural Grid"
-                            className="project-image"
+                            src="/favicon.svg"
+                            alt="WidKueski"
+                            className="project-image home-project-image"
                         />
 
                         <div className="project-content">
                             <div className="project-tags">
                             <span className="tag active">• Completed</span>
-                            <span className="tag">Fintech App</span>
+                            <span className="tag">Chrome Extension</span>
                             </div>
 
                             <div className="project-bottom">
                             <div className="project-header">
-                                <h3 className="project-title">OMEGA</h3>
-                                <a 
-                                href="https://github.com/HugoAguayo2006/omega" 
+                                <h3 className="project-title">WIDKUESKI</h3>
+                                <a
+                                href="https://github.com/HugoAguayo2006/widKueski"
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 className="arrow-btn"
@@ -113,8 +112,8 @@ const Home = () => {
                             </div>
 
                             <p className="project-text">
-                                A React Native fintech app developed during HackMTY 2025, under Capital One’s challenge, designed to manage credit cards and optimize
-                                payment strategies using TypeScript and Supabase.
+                                Chrome extension that integrates Kueski Pay financing into e-commerce sites. Built with Plasmo, React, TypeScript, SerpApi,
+                                FastAPI, PostgreSQL, and SQLAlchemy.
                             </p>
                             </div>
                         </div>

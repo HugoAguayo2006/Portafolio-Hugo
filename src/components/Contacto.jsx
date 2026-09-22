@@ -134,10 +134,12 @@ export default function ContactMe() {
                         <form onSubmit={handleSendEmail} noValidate>
                             <div className="form-row">
                                 <div className="input-group">
-                                    <label>FULL NAME</label>
+                                    <label htmlFor="home-contact-name">FULL NAME</label>
                                     <input
+                                        id="home-contact-name"
                                         name="name"
                                         type="text"
+                                        autoComplete="name"
                                         placeholder="Your Name"
                                         value={form.name}
                                         onChange={handleOnChange}
@@ -145,14 +147,16 @@ export default function ContactMe() {
                                         aria-describedby={errors.name ? "home-name-error" : undefined}
                                         className={errors.name ? "input-error" : ""}
                                     />
-                                    {errors.name && <span id="home-name-error" className="field-error">{errors.name}</span>}
+                                    {errors.name && <span id="home-name-error" className="field-error" role="alert">{errors.name}</span>}
                                 </div>
 
                                 <div className="input-group">
-                                    <label>EMAIL ADDRESS</label>
+                                    <label htmlFor="home-contact-email">EMAIL ADDRESS</label>
                                     <input
+                                        id="home-contact-email"
                                         name="email"
                                         type="email"
+                                        autoComplete="email"
                                         placeholder="youremail@example.com"
                                         value={form.email}
                                         onChange={handleOnChange}
@@ -160,14 +164,16 @@ export default function ContactMe() {
                                         aria-describedby={errors.email ? "home-email-error" : undefined}
                                         className={errors.email ? "input-error" : ""}
                                     />
-                                    {errors.email && <span id="home-email-error" className="field-error">{errors.email}</span>}
+                                    {errors.email && <span id="home-email-error" className="field-error" role="alert">{errors.email}</span>}
                                 </div>
                             </div>
 
                             <div className="input-group input-group-full">
-                                <label>PROJECT BRIEF</label>
+                                <label htmlFor="home-contact-message">PROJECT BRIEF</label>
                                 <textarea
+                                    id="home-contact-message"
                                     name="message"
+                                    rows="6"
                                     placeholder="Tell me about your project..."
                                     value={form.message}
                                     onChange={handleOnChange}
@@ -175,7 +181,7 @@ export default function ContactMe() {
                                     aria-describedby={errors.message ? "home-message-error" : undefined}
                                     className={errors.message ? "input-error" : ""}
                                 />
-                                {errors.message && <span id="home-message-error" className="field-error">{errors.message}</span>}
+                                {errors.message && <span id="home-message-error" className="field-error" role="alert">{errors.message}</span>}
                             </div>
 
                             <button type="submit" className="send-btn" disabled={status === "loading"}>
@@ -183,15 +189,15 @@ export default function ContactMe() {
                             </button>
 
                             {status === "loading" && (
-                                <p className="form-status loading">Sending message...</p>
+                                <p className="form-status loading" role="status" aria-live="polite">Sending message...</p>
                             )}
 
                             {status === "success" && (
-                                <p className="form-status success">✅ Message sent successfully!</p>
+                                <p className="form-status success" role="status" aria-live="polite">✅ Message sent successfully!</p>
                             )}
 
                             {status === "error" && (
-                                <p className="form-status error">❌ Something went wrong. Try again.</p>
+                                <p className="form-status error" role="alert">❌ Something went wrong. Try again.</p>
                             )}
                         </form>
 
