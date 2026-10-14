@@ -298,6 +298,11 @@
   }
 
 @media (max-width: 900px) {
+  .text-column {
+    width: 100%;
+    max-width: 100%;
+  }
+
   .home-intro {
     flex-direction: column;
     align-items: flex-start;
@@ -324,6 +329,10 @@
 }
 
 @media (max-width: 520px) {
+  html[lang="es"] .main-text {
+    font-size: clamp(28px, 7.5vw, 39px);
+  }
+
   .home-intro,
   .home-projects {
     padding-left: max(14px, env(safe-area-inset-left));

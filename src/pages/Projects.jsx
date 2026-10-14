@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useMemo, useState } from "react";
 import "./Projects.css";
 
@@ -184,18 +185,32 @@ const projects = [
 ];
 
 export default function Projects() {
+  const { t } = useTranslation();
+
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedTech, setSelectedTech] = useState("All");
   const [selectedStatus, setSelectedStatus] = useState("All");
 
   const filteredProjects = useMemo(() => {
+    const normalize = (value) =>
+      value
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase();
+    const query = normalize(search);
     return projects.filter((project) => {
-      const matchesSearch =
-        project.title.toLowerCase().includes(search.toLowerCase()) ||
-        project.description.toLowerCase().includes(search.toLowerCase()) ||
-        project.category.toLowerCase().includes(search.toLowerCase()) ||
-        project.tech.toLowerCase().includes(search.toLowerCase());
+      const matchesSearch = [
+        project.title,
+        project.description,
+        project.category,
+        project.tech,
+      ].some(
+        (value) =>
+          normalize(t(value)).includes(query) ||
+          normalize(t(value, { lng: "es" })).includes(query) ||
+          normalize(value).includes(query),
+      );
 
       const matchesCategory =
         selectedCategory === "All" || project.category === selectedCategory;
@@ -206,95 +221,97 @@ export default function Projects() {
       const matchesStatus =
         selectedStatus === "All" || project.status === selectedStatus;
 
-      return (
-        matchesSearch &&
-        matchesCategory &&
-        matchesTech &&
-        matchesStatus
-      );
+      return matchesSearch && matchesCategory && matchesTech && matchesStatus;
     });
-  }, [search, selectedCategory, selectedTech, selectedStatus]);
+  }, [search, selectedCategory, selectedTech, selectedStatus, t]);
 
   return (
     <section className="projects-page">
-
       <div className="projects-container">
         <div className="projects-top">
-          <p className="projects-kicker">EXPLORE MY WORK</p>
+          <p className="projects-kicker">{t("EXPLORE MY WORK")}</p>
 
           <h1 className="projects-title">
-            Project <span className="projects-title-gradient">Search</span>
+            {" "}
+            {t("Project")}{" "}
+            <span className="projects-title-gradient">{t("Search")}</span>
           </h1>
 
           <p className="projects-subtitle">
-            Browse my work through categories, technologies, and keywords.
-            This section is designed to make exploring my projects easier,
-            cleaner, and more interactive.
+            {" "}
+            {t(
+              "Browse my work through categories, technologies, and keywords. This section is designed to make exploring my projects easier, cleaner, and more interactive.",
+            )}{" "}
           </p>
         </div>
 
         <div className="projects-toolbar">
           <div className="projects-search-box">
-            <span className="projects-search-icon" aria-hidden="true">⌕</span>
+            <span className="projects-search-icon" aria-hidden="true">
+              ⌕
+            </span>
             <input
               type="text"
-              aria-label="Search projects"
-              placeholder="Search by title, description, category or technology..."
+              aria-label={t("Search projects")}
+              placeholder={t(
+                "Search by title, description, category or technology...",
+              )}
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
           </div>
 
           <div className="projects-filters">
-            <select 
-              aria-label="Filter by category"
+            <select
+              aria-label={t("Filter by category")}
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
             >
-              <option value="All">All Categories</option>
-              <option value="Web Development">Web Development</option>
-              <option value="Software">Software</option>
-              <option value="Physical prototype">Physical prototype</option>
-              <option value="Game Simulation">Game Simulation</option>
-              <option value="Full Stack App">Full Stack App</option>
-              <option value="AI / Logistics">AI / Logistics</option>
-              <option value="Chrome Extension">Chrome Extension</option>
-              <option value="Health Tech">Health Tech</option>
-
+              <option value="All">{t("All Categories")}</option>
+              <option value="Web Development">{t("Web Development")}</option>
+              <option value="Software">{t("Software")}</option>
+              <option value="Physical prototype">
+                {t("Physical prototype")}
+              </option>
+              <option value="Game Simulation">{t("Game Simulation")}</option>
+              <option value="Full Stack App">{t("Full Stack App")}</option>
+              <option value="AI / Logistics">{t("AI / Logistics")}</option>
+              <option value="Chrome Extension">{t("Chrome Extension")}</option>
+              <option value="Health Tech">{t("Health Tech")}</option>
             </select>
 
             <select
-              aria-label="Filter by technology"
+              aria-label={t("Filter by technology")}
               value={selectedTech}
               onChange={(e) => setSelectedTech(e.target.value)}
             >
-              <option value="All">All Technologies</option>
-              <option value="C++">C++</option>
-              <option value="HTML">HTML</option>
-              <option value="React">React</option>
-              <option value="React Native">React Native</option>
-              <option value="JavaScript">JavaScript</option>
-              <option value="Python">Python</option>
-              <option value="IoT">IoT</option>
-              <option value="Pokemon API">Pokemon API</option>
-              <option value="PostgreSQL">PostgreSQL</option>
-              <option value="TypeScript">TypeScript</option>
-              <option value="FastAPI">FastAPI</option>
-              <option value="Plasmo">Plasmo</option>
-              <option value="VBA">VBA</option>
-              <option value="Web">Web</option>
-              <option value="SEO">SEO</option>
+              <option value="All">{t("All Technologies")}</option>
+              <option value="C++">{t("C++")}</option>
+              <option value="HTML">{t("HTML")}</option>
+              <option value="React">{t("React")}</option>
+              <option value="React Native">{t("React Native")}</option>
+              <option value="JavaScript">{t("JavaScript")}</option>
+              <option value="Python">{t("Python")}</option>
+              <option value="IoT">{t("IoT")}</option>
+              <option value="Pokemon API">{t("Pokemon API")}</option>
+              <option value="PostgreSQL">{t("PostgreSQL")}</option>
+              <option value="TypeScript">{t("TypeScript")}</option>
+              <option value="FastAPI">{t("FastAPI")}</option>
+              <option value="Plasmo">{t("Plasmo")}</option>
+              <option value="VBA">{t("VBA")}</option>
+              <option value="Web">{t("Web")}</option>
+              <option value="SEO">{t("SEO")}</option>
             </select>
 
             <select
-              aria-label="Filter by status"
+              aria-label={t("Filter by status")}
               value={selectedStatus}
               onChange={(e) => setSelectedStatus(e.target.value)}
             >
-              <option value="All">All Status</option>
-              <option value="Completed">Completed</option>
-              <option value="In Progress">In Progress</option>
-              <option value="Maintenance">Maintenance</option>
+              <option value="All">{t("All Status")}</option>
+              <option value="Completed">{t("Completed")}</option>
+              <option value="In Progress">{t("In Progress")}</option>
+              <option value="Maintenance">{t("Maintenance")}</option>
             </select>
 
             <button
@@ -307,16 +324,14 @@ export default function Projects() {
                 setSelectedStatus("All");
               }}
             >
-              Clear Filters
+              {" "}
+              {t("Clear Filters")}{" "}
             </button>
           </div>
         </div>
 
         <div className="projects-results-bar" aria-live="polite">
-          <p>
-            Showing <span>{filteredProjects.length}</span> project
-            {filteredProjects.length !== 1 ? "s" : ""}
-          </p>
+          <p>{t("results", { count: filteredProjects.length })}</p>
         </div>
 
         <div className="projects-grid-1">
@@ -324,26 +339,32 @@ export default function Projects() {
             filteredProjects.map((project) => (
               <article className="project-card-1" key={project.id}>
                 <div className="project-card-image-wrapper">
-                  <img src={project.image} alt={project.imageAlt || project.title} loading="lazy" />
+                  <img
+                    src={project.image}
+                    alt={t(project.imageAlt || project.title)}
+                    loading="lazy"
+                  />
                   <div className="project-card-badges">
                     <span className="project-badge category-badge">
-                      {project.category}
+                      {t(project.category)}
                     </span>
                     <span className="project-badge status-badge">
-                      {project.status}
+                      {t(project.status)}
                     </span>
                   </div>
                 </div>
 
                 <div className="project-card-content">
                   <div className="project-card-topline">
-                    <span className="project-tech">{project.tech}</span>
+                    <span className="project-tech">{t(project.tech)}</span>
                     <span className="project-year">{project.year}</span>
                   </div>
 
-                  <h2 className="project-title">{project.title}</h2>
+                  <h2 className="project-title">{t(project.title)}</h2>
 
-                  <p className="project-description">{project.description}</p>
+                  <p className="project-description">
+                    {t(project.description)}
+                  </p>
 
                   <div className="project-card-footer">
                     {project.videoLink && project.repositoryLink ? (
@@ -354,7 +375,8 @@ export default function Projects() {
                           rel="noopener noreferrer"
                           className="project-link-btn"
                         >
-                          Video
+                          {" "}
+                          {t("Video")}{" "}
                         </a>
                         <a
                           href={project.repositoryLink}
@@ -362,7 +384,8 @@ export default function Projects() {
                           rel="noopener noreferrer"
                           className="project-link-btn project-link-btn-secondary"
                         >
-                          Repository
+                          {" "}
+                          {t("Repository")}{" "}
                         </a>
                       </div>
                     ) : project.link ? (
@@ -372,11 +395,15 @@ export default function Projects() {
                         rel="noopener noreferrer"
                         className="project-link-btn"
                       >
-                        {project.linkLabel || "View Project"}
+                        {t(project.linkLabel || "View Project")}
                       </a>
                     ) : (
-                      <span className="project-link-btn project-link-btn-disabled" aria-disabled="true">
-                        Private Academic Project
+                      <span
+                        className="project-link-btn project-link-btn-disabled"
+                        aria-disabled="true"
+                      >
+                        {" "}
+                        {t("Private Academic Project")}{" "}
                       </span>
                     )}
                   </div>
@@ -385,9 +412,12 @@ export default function Projects() {
             ))
           ) : (
             <div className="projects-empty-state">
-              <h3>No projects found</h3>
+              <h3>{t("No projects found")}</h3>
               <p>
-                Try adjusting the filters or searching with different keywords.
+                {" "}
+                {t(
+                  "Try adjusting the filters or searching with different keywords.",
+                )}{" "}
               </p>
             </div>
           )}
