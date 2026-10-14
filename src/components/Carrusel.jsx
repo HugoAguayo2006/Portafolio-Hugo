@@ -7,11 +7,11 @@ const techs = [
   { name: "C++", image: "/icons/logos/cplusplus.webp" },
   { name: "FastAPI", image: "/icons/logos/fastapi.svg" },
   { name: "Node.js", image: "/icons/logos/node.webp" },
-  { name: "Pydantic", image: "/favicon.svg" },
-  { name: "REST APIs", image: "/favicon.svg" },
-  { name: "WebSockets", image: "/favicon.svg" },
+  { name: "Pydantic", image: "/icons/logos/pydantic.webp" },
+  { name: "REST APIs", image: "/icons/logos/restapi-transparent.png" },
+  { name: "WebSockets", image: "/icons/logos/websocket-transparent.png" },
   { name: "Stripe", image: "/icons/logos/stripe.webp" },
-  { name: "EmailJS", image: "/favicon.svg" },
+  { name: "EmailJS", image: "/icons/logos/email.webp" },
 
   
   // Web development & design
@@ -23,8 +23,8 @@ const techs = [
   { name: "Tailwind CSS", image: "/icons/logos/tailwind.webp" },
   { name: "Vite", image: "/icons/logos/vitejs.svg" },
   { name: "React Router", image: "/icons/logos/reactrouter.svg" },
-  { name: "Framer Motion", image: "/icons/logos/framermotion.svg", lightSurface: true },
-  { name: "i18next", image: "/favicon.svg" },
+  { name: "Framer Motion", image: "/icons/logos/framermotion-light.svg" },
+  { name: "i18next", image: "/icons/logos/i18next.webp" },
   { name: "Figma", image: "/icons/logos/Figma.webp" },
   { name: "Wix", image: "/icons/logos/wix.webp" },
 
@@ -35,7 +35,7 @@ const techs = [
 
   // Mobile & browser extensions
   { name: "React Native", image: "/icons/logos/native.webp" },
-  { name: "Plasmo", image: "/favicon.svg" },
+  { name: "Plasmo", image: "/icons/logos/plasmo-transparent.png" },
   { name: "Chrome Extensions (Manifest V3)", image: "/icons/logos/chrome.svg" },
 
 
@@ -46,35 +46,34 @@ const techs = [
   { name: "Supabase", image: "/icons/logos/supabase.svg" },
   { name: "MySQL", image: "/icons/logos/MySQL.webp" },
   { name: "MongoDB", image: "/icons/logos/MongoDB.webp" },
-  { name: "SQLAlchemy", image: "/icons/logos/sqlalchemy.svg", lightSurface: true },
+  { name: "SQLAlchemy", image: "/icons/logos/sqlalchemy-light.svg" },
 
   // AI & data analysis
-  { name: "Gemini API", image: "/favicon.svg" },
+  { name: "Gemini API", image: "/icons/logos/geminiapi.webp" },
   { name: "Scikit-learn", image: "/icons/logos/scikitlearn.svg" },
   { name: "OpenCV", image: "/icons/logos/opencv.svg" },
   { name: "MATLAB", image: "/icons/logos/matlab.webp" },
   { name: "R", image: "/icons/logos/R.webp" },
   { name: "R Studio", image: "/icons/logos/R-Studio.webp" },
-  { name: "SerpApi", image: "/favicon.svg" },
+  { name: "SerpApi", image: "/icons/logos/serpapi.webp" },
 
   // Maps & route optimization
-  { name: "Google Maps API", image: "/favicon.svg" },
-  { name: "OpenStreetMap", image: "/favicon.svg" },
-  { name: "Leaflet", image: "/favicon.svg" },
+  { name: "Google Maps API", image: "/icons/logos/googlemaps-transparent.png" },
+  { name: "OpenStreetMap", image: "/icons/logos/openstreetmap-transparent.png" },
+  { name: "Leaflet", image: "/icons/logos/leaflet-transparent.png" },
   { name: "NetworkX", image: "/icons/logos/networkx.svg" },
-  { name: "OSMnx", image: "/favicon.svg" },
 
   // Hardware
   { name: "Raspberry Pi", image: "/icons/logos/raspberrypi.svg" },
 
   // Productivity & automation
   { name: "Google Workspace", image: "/icons/logos/workspace.webp" },
-  { name: "Google Workspace For Education", image: "/icons/logos/education.webp" },
-  { name: "VBA", image: "/favicon.svg" },
-  { name: "ActiveX", image: "/favicon.svg" },
+  { name: "Google Workspace For Education", image: "/icons/logos/education-transparent.png" },
+  { name: "VBA", image: "/icons/logos/vba-transparent.png" },
+  { name: "ActiveX", image: "/icons/logos/activex-transparent.png" },
 
   // Development, deployment & testing
-  { name: "Render", image: "/favicon.svg" },
+  { name: "Render", image: "/icons/logos/render-transparent.png" },
   { name: "Playwright", image: "/icons/logos/playwright.svg" },
   { name: "Pytest", image: "/icons/logos/pytest.svg" },
   { name: "Git", image: "/icons/logos/git.webp" },
@@ -157,7 +156,7 @@ export default function TechCarousel() {
                 className={`tech-item ${isActive ? "active" : ""}`}
                 aria-current={isActive ? "true" : undefined}
               >
-                <div className={`tech-icon-box${tech.lightSurface ? " tech-icon-box-light" : ""}`}>
+                <div className="tech-icon-box">
                   <img src={tech.image} alt={tech.name} className="tech-icon" />
                 </div>
                 <p className="tech-name">{tech.name}</p>
