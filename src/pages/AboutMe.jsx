@@ -20,7 +20,7 @@ const AboutMe = () =>{
                 <div className="aboutme-bottom">
                     {/* COLUMNA IZQUIERDA */}
                     <div className="aboutme-izquieda">
-                    <img src="/images/aboutme/yo-aboutme.webp" alt="Sobre mí" />
+                    <img src="/images/aboutme/yo-aboutme.webp" alt="Portrait of Jose Hugo Aguayo Mendoza" />
                     </div>
 
                     {/* COLUMNA DERECHA */}
@@ -80,9 +80,9 @@ const AboutMe = () =>{
 
                 <div className="certificates-grid">
                     <div className="certificate-card">
-                        <img src="/images/aboutme/diplomas/expo.webp" alt="1st place at Tec de Monterrey’s Expo Ingenierías (physical prototype category)" />
+                        <img src="/images/aboutme/diplomas/expo.webp" alt="1st place at Tec de Monterrey’s Engineering Expo (physical prototype category)" />
                         <div className="texto">
-                            <p className="certificado-titulo">1st place at Tec de Monterrey’s Expo Ingenierías (physical prototype category)</p>
+                            <p className="certificado-titulo">1st place at Tec de Monterrey’s Engineering Expo (physical prototype category)</p>
                             <p className="certificado-institucion">Instituto Tecnológico y de Estudios Superiores de Monterrey</p>
                             <p className="certificado-ano">2025</p>
                             <div className="btn-certificados">
@@ -165,9 +165,9 @@ const AboutMe = () =>{
                         </div>
                     </div>
                     <div className="certificate-card">
-                        <img src="/images/aboutme/diplomas/copilot-santander.webp" alt="Copilot: domina la IA en Microsoft 365 completion certificate from Santander Open Academy" />
+                        <img src="/images/aboutme/diplomas/copilot-santander.webp" alt="Copilot: Master AI in Microsoft 365 completion certificate from Santander Open Academy" />
                         <div className="texto">
-                            <p className="certificado-titulo">Copilot: domina la IA en Microsoft 365</p>
+                            <p className="certificado-titulo">Copilot: Master AI in Microsoft 365</p>
                             <p className="certificado-institucion">Santander Open Academy</p>
                             <p className="certificado-ano">2026</p>
                             <div className="btn-certificados">
@@ -182,9 +182,9 @@ const AboutMe = () =>{
                         </div>
                     </div>
                     <div className="certificate-card">
-                        <img src="/images/aboutme/diplomas/santander-f1.webp" alt="Lidera a Toda Velocidad: Lecciones de la Fórmula 1" />
+                        <img src="/images/aboutme/diplomas/santander-f1.webp" alt="Lead at Full Speed: Lessons from Formula 1" />
                         <div className="texto">
-                            <p className="certificado-titulo">Lidera a Toda Velocidad: Lecciones de la Fórmula 1</p>
+                            <p className="certificado-titulo">Lead at Full Speed: Lessons from Formula 1</p>
                             <p className="certificado-institucion">Santander Open Academy</p>
                             <p className="certificado-ano">2026</p>
                             <div className="btn-certificados">
@@ -199,9 +199,9 @@ const AboutMe = () =>{
                         </div>
                     </div>
                     <div className="certificate-card">
-                        <img src="/images/aboutme/diplomas/diploma-peer-generacion-25-26.webp" alt="Diploma Peer Generación 25-26" />
+                        <img src="/images/aboutme/diplomas/diploma-peer-generacion-25-26.webp" alt="Peer Mentoring Diploma — Class of 2025–2026" />
                         <div className="texto">
-                            <p className="certificado-titulo">Diploma Peer Generación 25-26</p>
+                            <p className="certificado-titulo">Peer Mentoring Diploma — Class of 2025–2026</p>
                             <p className="certificado-institucion">Instituto Tecnológico y de Estudios Superiores de Monterrey</p>
                             <p className="certificado-ano">2026</p>
                             <div className="btn-certificados">
@@ -233,7 +233,7 @@ const AboutMe = () =>{
                         </div>
                     </div>
                     <div className="certificate-card">
-                        <img src="/images/aboutme/diplomas/FIFA World Cup 2026 Volunteer Certificate_SPA.jpeg" alt="Certificado de voluntariado de la Copa Mundial de la FIFA 2026 en español" />
+                        <img src="/images/aboutme/diplomas/FIFA World Cup 2026 Volunteer Certificate_SPA.jpeg" alt="FIFA World Cup 2026 volunteer certificate in Spanish" />
                         <div className="texto">
                             <p className="certificado-titulo">FIFA World Cup 2026 Volunteer Certificate — Spanish</p>
                             <p className="certificado-institucion">FIFA World Cup 2026 Volunteer Program</p>

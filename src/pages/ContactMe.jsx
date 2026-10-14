@@ -87,7 +87,7 @@ export default function ContactMe() {
             console.log(res);
 
             if (!data.ok) {
-                throw new Error(res.message || "Error al enviar");
+                throw new Error(res.message || "Unable to send message");
             }
 
             setStatus("success");

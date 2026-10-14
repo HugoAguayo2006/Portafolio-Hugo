@@ -12,29 +12,29 @@ export default async function handler(req, res) {
 
     if (!name || !email || !message) {
       return res.status(400).json({
-        message: "Faltan campos obligatorios",
+        message: "Required fields are missing",
       });
     }
 
     const data = await resend.emails.send({
-      from: "📩 Mensaje desde el portafolio <onboarding@resend.dev>",
+      from: "📩 Portfolio message <onboarding@resend.dev>",
       to: "hugoaguayo50@gmail.com",
-      subject: "🚀 Nuevo mensaje desde tu portafolio",
+      subject: "🚀 New message from your portfolio",
       reply_to: email,
       html: `
-        <h2>📩 Nuevo mensaje recibido</h2>
-        <p>🌐 Alguien te contactó desde tu página web:</p>
+        <h2>📩 New message received</h2>
+        <p>🌐 Someone contacted you through your website:</p>
 
         <div style="padding:16px; border-radius:10px; background:#f5f5f5; color:#111;">
-          <p><strong>👤 Nombre:</strong> ${name}</p>
-          <p><strong>📧 Correo:</strong> ${email}</p>
-          ${subject ? `<p><strong>📝 Asunto:</strong> ${subject}</p>` : ""}
-          <p><strong>💬 Mensaje:</strong></p>
+          <p><strong>👤 Name:</strong> ${name}</p>
+          <p><strong>📧 Email:</strong> ${email}</p>
+          ${subject ? `<p><strong>📝 Subject:</strong> ${subject}</p>` : ""}
+          <p><strong>💬 Message:</strong></p>
           <p style="white-space: pre-line;">${message}</p>
         </div>
 
         <br/>
-        <p>⚡ Revisa tu bandeja para responder lo antes posible.</p>
+        <p>⚡ Check your inbox to reply as soon as possible.</p>
       `,
     });
 

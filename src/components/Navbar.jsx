@@ -30,7 +30,7 @@ const Navbar = ({children}) => {
                 <button
                     type="button"
                     className="menu-toggle"
-                    aria-label={isMenuOpen ? "Cerrar menu de navegacion" : "Abrir menu de navegacion"}
+                    aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
                     aria-expanded={isMenuOpen}
                     aria-controls="primary-navigation"
                     onClick={() => setIsMenuOpen((prev) => !prev)}
@@ -42,13 +42,13 @@ const Navbar = ({children}) => {
 
                   <div className="nav-left">
 
-                    <NavLink to="/" className="logo" onClick={closeMenu}>HUGO'S_PORTAFOLIO</NavLink>
+                    <NavLink to="/" className="logo" onClick={closeMenu}>HUGO'S_PORTFOLIO</NavLink>
                 </div>
 
 
                 <nav
                     id="primary-navigation"
-                    aria-label="Navegación principal"
+                    aria-label="Main navigation"
                     className={`nav-center ${isMenuOpen ? "nav-center-open" : ""}`}
                 >
                         <NavLink to="/" className="link" onClick={closeMenu}>HOME</NavLink>

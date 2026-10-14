@@ -179,16 +179,25 @@
     0 0 24px rgba(207, 92, 255, 0.12);
 }
 
-.experience-brand-image {
+.experience-brand-media {
   width: 100%;
   height: 100%;
   min-height: 220px;
-  padding: clamp(32px, 5vw, 64px);
-  object-fit: contain;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
   background:
     radial-gradient(circle at 30% 20%, rgba(207, 92, 255, 0.25), transparent 42%),
     linear-gradient(145deg, #071c17, #0f172a);
   border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.experience-brand-image {
+  width: clamp(280px, 165%, 420px);
+  max-width: none;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .client-work {
@@ -214,8 +223,9 @@
 }
 
 .client-work li {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
   gap: 18px;
   padding: 10px 12px;
   border-radius: 10px;
@@ -228,9 +238,35 @@
 }
 
 .client-work li span {
-  max-width: 48%;
-  text-align: right;
   color: #d8b4fe;
+}
+
+.client-work-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.client-work-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid #10b981;
+  border-radius: 8px;
+  color: #6ee7b7;
+  background: rgba(16, 185, 129, 0.08);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.client-work-link:hover {
+  background: rgba(16, 185, 129, 0.2);
 }
 
 .leadership-grid,
@@ -300,10 +336,12 @@
 .btn-proyecto {
     width: min(220px, 100%);
     min-height: 45px;
-    border-radius: 10px; 
-    background-color: #10B981;
+    border: 4px solid transparent;
+    border-radius: 12px;
+    background:
+      linear-gradient(#10B981, #10B981) padding-box,
+      linear-gradient(0.25turn, #10B981, #ebf8e1, #ffffff) border-box;
     color: white;
-    border: none;
     cursor: pointer;
     text-decoration: none;
     margin-top: 20px;
@@ -339,11 +377,15 @@
     height: 220px;
   }
 
-  .experience-brand-image {
+  .experience-brand-media {
     min-height: 190px;
     max-height: 260px;
     border-right: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .experience-brand-image {
+    width: clamp(320px, 135%, 460px);
   }
 
   .leadership-grid,
@@ -352,13 +394,12 @@
   }
 
   .client-work li {
-    flex-direction: column;
-    gap: 5px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
   }
 
-  .client-work li span {
-    max-width: none;
-    text-align: left;
+  .client-work-link {
+    justify-self: start;
   }
 
   .seccion-experiencia {
@@ -392,5 +433,7 @@
 .btn-proyecto:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    background-color: #059669; 
+    background:
+      linear-gradient(#059669, #059669) padding-box,
+      linear-gradient(0.25turn, #10B981, #ebf8e1, #ffffff) border-box;
 }

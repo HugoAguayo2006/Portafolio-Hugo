@@ -7,6 +7,7 @@ import AboutMe from './pages/AboutMe.jsx';
 import Pro from './pages/Projects.jsx';
 import Conta from './pages/ContactMe.jsx';
 import Experience from './pages/Experience.jsx';
+import NotFound from './pages/NotFound.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -22,6 +23,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="experience" element={<Experience />} />
           <Route path="projects" element={<Pro />} />
           <Route path="contact-me" element={<Conta />} />
+          <Route path="*" element={<NotFound />} />
 
         </Route>
 

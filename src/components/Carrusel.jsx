@@ -86,14 +86,14 @@ export default function TechCarousel() {
       <div
         className="tech-card"
         role="region"
-        aria-roledescription="carrusel"
-        aria-label="Tecnologías"
+        aria-roledescription="carousel"
+        aria-label="Technologies"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
         onFocusCapture={() => setIsPaused(true)}
         onBlurCapture={() => setIsPaused(false)}
       >
-        <button type="button" className="nav-btn nav-btn-left" onClick={prevSlide} aria-label="Tecnología anterior">
+        <button type="button" className="nav-btn nav-btn-left" onClick={prevSlide} aria-label="Previous technology">
           <span>‹</span>
         </button>
 
@@ -116,7 +116,7 @@ export default function TechCarousel() {
           })}
         </div>
 
-        <button type="button" className="nav-btn nav-btn-right" onClick={nextSlide} aria-label="Tecnología siguiente">
+        <button type="button" className="nav-btn nav-btn-right" onClick={nextSlide} aria-label="Next technology">
           <span>›</span>
         </button>
       </div>

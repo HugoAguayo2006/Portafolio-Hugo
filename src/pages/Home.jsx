@@ -32,7 +32,7 @@ const Home = () => {
             </div>
 
             <div className="image-column">
-                <img src="/images/home/jose-hugo-aguayo-mendoza-2.webp" alt="Foto de Jose Hugo Aguayo Mendoza" />
+                <img src="/images/home/jose-hugo-aguayo-mendoza-2.webp" alt="Portrait of Jose Hugo Aguayo Mendoza" />
             </div>
             
         </section>
@@ -52,7 +52,7 @@ const Home = () => {
                         
                         <article className="project-card left-card">
                         <img
-                            src="/favicon.svg"
+                            src="/images/proyectos/courier.webp"
                             alt="Courier AI"
                             className="project-image home-project-image"
                         />
@@ -87,7 +87,7 @@ const Home = () => {
                         <article className="project-card right-card">
                             
                         <img
-                            src="/favicon.svg"
+                            src="/images/proyectos/kuesky.webp"
                             alt="WidKueski"
                             className="project-image home-project-image"
                         />

@@ -212,12 +212,10 @@
   }
 
   .home-project-image {
+    height: auto;
     object-fit: contain;
-    padding: clamp(36px, 6vw, 84px);
-    background:
-      radial-gradient(circle at 25% 20%, rgba(16, 185, 129, 0.3), transparent 40%),
-      radial-gradient(circle at 80% 75%, rgba(207, 92, 255, 0.25), transparent 42%),
-      #071c17;
+    padding: 0;
+    background: #0b1220;
   }
 
   .project-content {

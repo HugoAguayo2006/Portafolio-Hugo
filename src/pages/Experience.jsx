@@ -1,6 +1,14 @@
 import React from 'react'
 import './Experience.css'
 
+const clientWork = [
+  { name: 'OVISS Global Website', period: 'February 2026 — Present', url: 'https://www.oviss.org/es' },
+  { name: 'Colegio Matel Chapalita', period: 'January 2026 — Present', url: 'https://www.matelgdl.edu.mx/' },
+  { name: 'Instituto Nueva Galicia Tlajomulco', period: 'February — August 2026 · Maintenance ongoing', url: 'https://www.ing.edu.mx/' },
+  { name: 'Colegio Colonial', period: 'March 2024 — April 2026 · Maintenance ongoing', url: 'https://www.colegiocolonial.edu.mx/' },
+  { name: 'Instituto Nueva Galicia', period: 'September — November 2025 · Maintenance ongoing', url: 'https://www.nuevagalicia.edu.mx/' },
+]
+
 function Experience() {
   const skillGroups = [
     {
@@ -140,11 +148,13 @@ function Experience() {
 
           <div className="experience-education-right">
             <div className="education-card-morado professional-card">
-              <img
-                className="experience-brand-image"
-                src="/favicon.svg"
-                alt="NIVOSTECH logo"
-              />
+              <div className="experience-brand-media">
+                <img
+                  className="experience-brand-image"
+                  src="/images/experience/nivos.webp"
+                  alt="NIVOSTECH logo"
+                />
+              </div>
 
               <div className="education-card-content">
                 <p className="education-card-years morado">March 2024 — Present</p>
@@ -160,11 +170,23 @@ function Experience() {
                 <div className="client-work">
                   <h4>Selected client work</h4>
                   <ul>
-                    <li><strong>OVISS Global Website</strong><span>February 2026 — Present</span></li>
-                    <li><strong>Colegio Matel Chapalita</strong><span>January 2026 — Present</span></li>
-                    <li><strong>Instituto Nueva Galicia Tlajomulco</strong><span>February — August 2026 · Maintenance ongoing</span></li>
-                    <li><strong>Colegio Colonial</strong><span>March 2024 — April 2026 · Maintenance ongoing</span></li>
-                    <li><strong>Instituto Nueva Galicia</strong><span>September — November 2025 · Maintenance ongoing</span></li>
+                    {clientWork.map((client) => (
+                      <li key={client.name}>
+                        <div className="client-work-details">
+                          <strong>{client.name}</strong>
+                          <span>{client.period}</span>
+                        </div>
+                        <a
+                          href={client.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="client-work-link"
+                          aria-label={`Visit ${client.name} website (opens in a new tab)`}
+                        >
+                          Visit Website
+                        </a>
+                      </li>
+                    ))}
                   </ul>
                 </div>
 

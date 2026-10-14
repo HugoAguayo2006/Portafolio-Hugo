@@ -3,6 +3,76 @@ import "./Projects.css";
 
 const projects = [
   {
+    id: 10,
+    title: "OVISS Global Website",
+    category: "Web Development",
+    tech: "Web / SEO",
+    year: "2026",
+    status: "In Progress",
+    description:
+      "Website developed for OVISS Global as part of NIVOSTECH’s client work. Project active since February 2026.",
+    image: "/images/proyectos/oviss.webp",
+    imageAlt: "OVISS Global website preview",
+    link: "https://www.oviss.org/es",
+    linkLabel: "Visit Website",
+  },
+  {
+    id: 11,
+    title: "Colegio Matel Chapalita",
+    category: "Web Development",
+    tech: "Web / SEO",
+    year: "2026",
+    status: "In Progress",
+    description:
+      "School website developed for Colegio Matel Chapalita through NIVOSTECH. Project active since January 2026.",
+    image: "/images/proyectos/matel.webp",
+    imageAlt: "Colegio Matel Chapalita website preview",
+    link: "https://www.matelgdl.edu.mx/",
+    linkLabel: "Visit Website",
+  },
+  {
+    id: 12,
+    title: "Instituto Nueva Galicia Tlajomulco",
+    category: "Web Development",
+    tech: "Web / SEO",
+    year: "2026",
+    status: "Maintenance",
+    description:
+      "School website developed for Instituto Nueva Galicia Tlajomulco through NIVOSTECH between February and August 2026, with ongoing maintenance.",
+    image: "/images/proyectos/ing.webp",
+    imageAlt: "Instituto Nueva Galicia Tlajomulco website preview",
+    link: "https://www.ing.edu.mx/",
+    linkLabel: "Visit Website",
+  },
+  {
+    id: 13,
+    title: "Colegio Colonial",
+    category: "Web Development",
+    tech: "Web / SEO",
+    year: "2024–2026",
+    status: "Maintenance",
+    description:
+      "School website developed for Colegio Colonial through NIVOSTECH between March 2024 and April 2026, with ongoing maintenance.",
+    image: "/images/proyectos/colonial.webp",
+    imageAlt: "Colegio Colonial website preview",
+    link: "https://www.colegiocolonial.edu.mx/",
+    linkLabel: "Visit Website",
+  },
+  {
+    id: 14,
+    title: "Instituto Nueva Galicia",
+    category: "Web Development",
+    tech: "Web / SEO",
+    year: "2025",
+    status: "Maintenance",
+    description:
+      "School website developed for Instituto Nueva Galicia through NIVOSTECH between September and November 2025, with ongoing maintenance.",
+    image: "/images/proyectos/galicia.webp",
+    imageAlt: "Instituto Nueva Galicia website preview",
+    link: "https://www.nuevagalicia.edu.mx/",
+    linkLabel: "Visit Website",
+  },
+  {
     id: 6,
     title: "Courier AI / RouteBoost",
     category: "AI / Logistics",
@@ -11,7 +81,7 @@ const projects = [
     status: "Completed",
     description:
       "Real-time logistics platform developed for the 36-hour HackMTY 2026 Infosys challenge. It optimizes courier order acceptance and routing with React, TypeScript, Python, FastAPI, WebSockets, OpenStreetMap, NetworkX, OSMnx, and the Gemini API.",
-    image: "/favicon.svg",
+    image: "/images/proyectos/courier.webp",
     link: "https://github.com/HugoAguayo2006/RouteBoost",
   },
   {
@@ -23,8 +93,9 @@ const projects = [
     status: "Completed",
     description:
       "Plasmo-based Chrome extension that integrates Kueski Pay financing into e-commerce sites. Built with React, TypeScript, Plasmo, SerpApi, FastAPI, PostgreSQL, and SQLAlchemy.",
-    image: "/favicon.svg",
-    link: "https://github.com/HugoAguayo2006/widKueski",
+    image: "/images/proyectos/kuesky.webp",
+    videoLink: "https://www.youtube.com/watch?v=ZAQd8vquHfw",
+    repositoryLink: "https://github.com/HugoAguayo2006/widKueski",
   },
   {
     id: 8,
@@ -35,19 +106,19 @@ const projects = [
     status: "Completed",
     description:
       "C++ streaming-service simulation built with object-oriented programming principles, including inheritance, polymorphism, operator overloading, CSV-based ratings, and movie and series management.",
-    image: "/favicon.svg",
+    image: "/images/proyectos/netflix.webp",
     link: "https://github.com/HugoAguayo2006/Netflix-Simulation-Program",
   },
   {
     id: 9,
-    title: "App Salud Infantil",
+    title: "Child Health App",
     category: "Health Tech",
     tech: "VBA / ActiveX",
     year: "2025",
     status: "Completed",
     description:
       "Application developed for Pasitos Education and Health using VBA macros and ActiveX controls to provide health recommendations based on children’s symptoms.",
-    image: "/favicon.svg",
+    image: "/images/proyectos/pasitos.webp",
   },
   {
     id: 1,
@@ -211,6 +282,8 @@ export default function Projects() {
               <option value="FastAPI">FastAPI</option>
               <option value="Plasmo">Plasmo</option>
               <option value="VBA">VBA</option>
+              <option value="Web">Web</option>
+              <option value="SEO">SEO</option>
             </select>
 
             <select
@@ -221,6 +294,7 @@ export default function Projects() {
               <option value="All">All Status</option>
               <option value="Completed">Completed</option>
               <option value="In Progress">In Progress</option>
+              <option value="Maintenance">Maintenance</option>
             </select>
 
             <button
@@ -250,7 +324,7 @@ export default function Projects() {
             filteredProjects.map((project) => (
               <article className="project-card-1" key={project.id}>
                 <div className="project-card-image-wrapper">
-                  <img src={project.image} alt={project.title} loading="lazy" />
+                  <img src={project.image} alt={project.imageAlt || project.title} loading="lazy" />
                   <div className="project-card-badges">
                     <span className="project-badge category-badge">
                       {project.category}
@@ -298,7 +372,7 @@ export default function Projects() {
                         rel="noopener noreferrer"
                         className="project-link-btn"
                       >
-                        View Project
+                        {project.linkLabel || "View Project"}
                       </a>
                     ) : (
                       <span className="project-link-btn project-link-btn-disabled" aria-disabled="true">
