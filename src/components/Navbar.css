@@ -281,6 +281,19 @@
   }
 }
 
+@media (min-width: 701px) and (max-width: 1200px) {
+  .container-navbar {
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  }
+
+  .nav-actions {
+    display: flex;
+    grid-column: 3;
+    grid-row: 1;
+    gap: 8px;
+  }
+}
+
 @media (max-width: 520px) {
   html {
     scroll-padding-top: calc(var(--navbar-height, 68px) + 8px);

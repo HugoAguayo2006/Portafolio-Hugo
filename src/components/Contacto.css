@@ -90,3 +90,19 @@
         gap: 14px;
     }
 }
+
+@media (max-width: 1024px) {
+    .contactMe-page-1 .contactMe-top {
+        text-align: center;
+    }
+
+    .contactMe-page-1 .letras-pequenas-abajo {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .contactMe-page-1 .letras-pequenas-abajo {
+        margin-bottom: 20px;
+    }
+}

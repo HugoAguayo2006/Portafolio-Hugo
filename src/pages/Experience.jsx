@@ -102,7 +102,7 @@ function Experience() {
   ];
 
   return (
-    <section className="projects-page">
+    <section className="projects-page experience-page">
       {/* ARRIBA */}
       <div className="projects-top">
         <p className="projects-kicker">{t("BUILDING MY STORY")}</p>

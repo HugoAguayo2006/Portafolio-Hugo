@@ -232,6 +232,25 @@
         font-weight: 600;
     }
 
+@media (min-width: 901px) {
+    .aboutme-bottom {
+        align-items: stretch;
+    }
+
+    .aboutme-izquieda {
+        position: relative;
+        min-height: 360px;
+    }
+
+    .aboutme-izquieda img {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        aspect-ratio: auto;
+        object-position: center;
+    }
+}
+
 @media (max-width: 900px) {
     .aboutme-bottom {
         flex-direction: column;
@@ -284,4 +303,16 @@
         padding-left: max(14px, env(safe-area-inset-left));
         padding-right: max(14px, env(safe-area-inset-right));
     }
+}
+
+@media (max-width: 1024px) {
+  .aboutme-derecha {
+    text-align: center;
+  }
+}
+
+@media (min-width: 900px) {
+  .aboutme-derecha {
+    text-align: left;
+  }
 }

@@ -398,3 +398,35 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 1024px) {
+  .project-card-content {
+    text-align: center;
+  }
+
+  .project-card-topline,
+  .projects-results-bar {
+    justify-content: center;
+  }
+
+  .project-card-topline {
+    flex-wrap: wrap;
+  }
+
+  .project-card-badges {
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .project-card-image-wrapper {
+    height: auto;
+  }
+
+  .project-card-image-wrapper img {
+    height: 210px;
+  }
+}

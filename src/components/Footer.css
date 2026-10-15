@@ -170,3 +170,18 @@
     min-height: 46px;
   }
 }
+
+@media (max-width: 1024px) {
+  .container-footer {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left {
+    width: 100%;
+  }
+
+  .contenedor-botones {
+    justify-content: center;
+  }
+}

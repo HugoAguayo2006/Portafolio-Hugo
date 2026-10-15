@@ -437,3 +437,45 @@
       linear-gradient(#059669, #059669) padding-box,
       linear-gradient(0.25turn, #10B981, #ebf8e1, #ffffff) border-box;
 }
+
+@media (max-width: 1024px) {
+  .experience-page .projects-top,
+  .experience-page .projects-title {
+    margin-bottom: 0;
+  }
+
+  .experience-bottom {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .experience-bottom {
+    text-align: center;
+  }
+
+  .experience-title,
+  .experience-title-morado {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .experience-title::before,
+  .experience-title-morado::before {
+    margin-top: 0;
+  }
+
+  .skill-list {
+    justify-content: center;
+  }
+
+  .client-work-link {
+    justify-self: center;
+  }
+
+  .btn-proyecto {
+    align-self: center;
+  }
+}
