@@ -4,6 +4,75 @@ import "./Projects.css";
 
 const projects = [
   {
+    id: 15,
+    title: "TRUEQUETEC",
+    category: "Full Stack App",
+    tech: "React / TypeScript / FastAPI / PostgreSQL",
+    year: "2026",
+    status: "Completed",
+    description:
+      "Student marketplace for exchanging items without direct payments. Includes listings with images, price estimates, trade negotiation, real-time chat, ratings, and an admin panel, built with React, FastAPI, PostgreSQL, Cloudinary, and SerpAPI.",
+    image: "/images/proyectos/truequetec.webp",
+    imageAlt: "TRUEQUETEC app logo",
+    link: "https://truequetec.vercel.app",
+    linkLabel: "Visit Website",
+    videoLink: "https://www.youtube.com/watch?v=xUbnU2vyGPk",
+    repositoryLink: "https://github.com/HugoAguayo2006/TRUEQUETEC",
+  },
+  {
+    id: 16,
+    title: "Run Dashboard / Maratón",
+    category: "Fitness App",
+    tech: "Next.js / TypeScript / Supabase / Gemini API",
+    year: "2026",
+    status: "In Progress",
+    description:
+      "Running preparation dashboard with personalized training plans, running and strength logs, Strava imports, progress metrics, and route maps. Built with Next.js, TypeScript, and Supabase, with Bolt AI as a contextual training assistant.",
+    image: "/images/proyectos/maraton-dashboard.webp",
+    imageClassName: "project-card-logo-monochrome",
+    imageAlt: "Run Dashboard logo",
+    repositoryLink: "https://github.com/HugoAguayo2006/maraton-dashboard",
+  },
+  {
+    id: 17,
+    title: "VoluntApp",
+    category: "Mobile App",
+    tech: "React Native / Expo / Node.js / MongoDB",
+    year: "2026",
+    status: "In Progress",
+    description:
+      "Mobile app for Banco de Alimentos Guadalajara staff to manage volunteers, activities, shifts, attendance, and service hours. Includes QR check-in and report exports, using React Native, Expo, Express, and MongoDB Atlas.",
+    image: "/images/proyectos/voluntapp.webp",
+    imageAlt: "Banco de Alimentos Guadalajara logo used in VoluntApp",
+    repositoryLink: "https://github.com/Guillermo-dlti/voluntapp",
+  },
+  {
+    id: 18,
+    title: "Córrele que te alcanzo",
+    category: "Game Simulation",
+    tech: "Unity / C#",
+    year: "2026",
+    status: "Completed",
+    description:
+      "2D music trivia runner built with Unity and C#. Identify songs while escaping a zombie, with answers affecting movement speed. Features Deezer audio previews, projectiles, high scores, and save/load support.",
+    image: "/images/proyectos/correle-que-te-alcanzo.webp",
+    imageAlt: "Music and zombie artwork from Córrele que te alcanzo",
+    repositoryLink: "https://github.com/Ramirez-rz/videogame-correlequetealcanzo",
+  },
+  {
+    id: 20,
+    title: "Chalendar / Task Dashboard",
+    category: "Full Stack App",
+    tech: "React / JavaScript / Supabase",
+    year: "2026",
+    status: "In Progress",
+    description:
+      "Student task planner built with React and Vite, combining manual tasks and Canvas LMS assignments with calendar and agenda views. Includes Supabase cloud sync, external calendars, Zoom meetings, and PWA push reminders.",
+    image: "/images/proyectos/task-dashboard.webp",
+    imageAlt: "Chalendar task planner app icon",
+    repositoryLink: "https://github.com/HugoAguayo2006/task-dashboard",
+  },
+  {
     id: 10,
     title: "OVISS Global Website",
     category: "Web Development",
@@ -182,6 +251,21 @@ const projects = [
     videoLink: "https://www.youtube.com/watch?v=boAvT8zibRI",
     repositoryLink: "https://github.com/HugoAguayo2006/chatify/tree/UI-develop",
   },
+  {
+    id: 19,
+    title: "Magnetic Braking Simulation",
+    category: "Scientific Simulation",
+    tech: "MATLAB",
+    year: "2025",
+    status: "Completed",
+    description:
+      "MATLAB simulation of a solenoid's magnetic field and the braking of a moving magnet. Uses numerical field calculations and fourth-order Runge–Kutta integration to visualize the field and analyze the magnet's motion.",
+    image: "/images/proyectos/frenos-magneticos.webp",
+    imageAlt: "Solenoid magnetic field visualization from the MATLAB simulation",
+    videoLink:
+      "https://github.com/HugoAguayo2006/Proyecto_Frenos_Magneticos/blob/main/Entrega_final/caida_im%C3%A1n.mp4",
+    repositoryLink: "https://github.com/HugoAguayo2006/Proyecto_Frenos_Magneticos",
+  },
 ];
 
 export default function Projects() {
@@ -278,6 +362,11 @@ export default function Projects() {
               <option value="AI / Logistics">{t("AI / Logistics")}</option>
               <option value="Chrome Extension">{t("Chrome Extension")}</option>
               <option value="Health Tech">{t("Health Tech")}</option>
+              <option value="Fitness App">{t("Fitness App")}</option>
+              <option value="Mobile App">{t("Mobile App")}</option>
+              <option value="Scientific Simulation">
+                {t("Scientific Simulation")}
+              </option>
             </select>
 
             <select
@@ -301,6 +390,15 @@ export default function Projects() {
               <option value="VBA">{t("VBA")}</option>
               <option value="Web">{t("Web")}</option>
               <option value="SEO">{t("SEO")}</option>
+              <option value="Next.js">{t("Next.js")}</option>
+              <option value="Supabase">{t("Supabase")}</option>
+              <option value="Gemini API">{t("Gemini API")}</option>
+              <option value="Expo">{t("Expo")}</option>
+              <option value="Node.js">{t("Node.js")}</option>
+              <option value="MongoDB">{t("MongoDB")}</option>
+              <option value="Unity">{t("Unity")}</option>
+              <option value="C#">{t("C#")}</option>
+              <option value="MATLAB">{t("MATLAB")}</option>
             </select>
 
             <select
@@ -341,6 +439,7 @@ export default function Projects() {
                 <div className="project-card-image-wrapper">
                   <img
                     src={project.image}
+                    className={project.imageClassName}
                     alt={t(project.imageAlt || project.title)}
                     loading="lazy"
                   />
@@ -367,36 +466,39 @@ export default function Projects() {
                   </p>
 
                   <div className="project-card-footer">
-                    {project.videoLink && project.repositoryLink ? (
+                    {project.link || project.videoLink || project.repositoryLink ? (
                       <div className="project-link-group">
-                        <a
-                          href={project.videoLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="project-link-btn"
-                        >
-                          {" "}
-                          {t("Video")}{" "}
-                        </a>
-                        <a
-                          href={project.repositoryLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="project-link-btn project-link-btn-secondary"
-                        >
-                          {" "}
-                          {t("Repository")}{" "}
-                        </a>
+                        {project.link && (
+                          <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="project-link-btn"
+                          >
+                            {t(project.linkLabel || "View Project")}
+                          </a>
+                        )}
+                        {project.videoLink && (
+                          <a
+                            href={project.videoLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={`project-link-btn${project.link ? " project-link-btn-secondary" : ""}`}
+                          >
+                            {t("Video")}
+                          </a>
+                        )}
+                        {project.repositoryLink && (
+                          <a
+                            href={project.repositoryLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={`project-link-btn${project.link || project.videoLink ? " project-link-btn-secondary" : ""}`}
+                          >
+                            {t("Repository")}
+                          </a>
+                        )}
                       </div>
-                    ) : project.link ? (
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="project-link-btn"
-                      >
-                        {t(project.linkLabel || "View Project")}
-                      </a>
                     ) : (
                       <span
                         className="project-link-btn project-link-btn-disabled"
